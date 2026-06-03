@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airline AI/ML Security Program - Leadership Briefing</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1a1a2e;--secondary:#16213e;--accent:#0f3460;--highlight:#e94560;--text:#eee;--text-dim:#aaa;--success:#00d4aa;--warning:#ffa726;--danger:#ef5350;--card-bg:#1e2a3a}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--primary);color:var(--text);overflow-x:hidden}
+.slide{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:80px 60px;position:relative;border-bottom:1px solid rgba(255,255,255,0.05)}
+.slide:nth-child(even){background:var(--secondary)}
+.slide-num{position:absolute;top:30px;right:40px;font-size:13px;color:var(--text-dim)}
+h1{font-size:3.2rem;font-weight:700;margin-bottom:16px;background:linear-gradient(135deg,#fff,#64b5f6,#e94560);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
+h2{font-size:2.4rem;font-weight:600;margin-bottom:24px;color:#fff;text-align:center}
+h3{font-size:1.6rem;font-weight:600;margin-bottom:16px;color:var(--highlight)}
+p{font-size:1.05rem;line-height:1.7;color:var(--text-dim);max-width:850px;text-align:center;margin-bottom:10px}
+.sub{font-size:1.3rem;color:var(--text-dim);margin-bottom:30px;text-align:center}
+.grid{display:grid;gap:20px;width:100%;max-width:1200px;margin-top:24px}
+.g2{grid-template-columns:1fr 1fr}
+.g3{grid-template-columns:1fr 1fr 1fr}
+.g4{grid-template-columns:1fr 1fr 1fr 1fr}
+.card{background:var(--card-bg);border-radius:14px;padding:28px;border:1px solid rgba(255,255,255,0.08);transition:transform .3s}
+.card:hover{transform:translateY(-3px)}
+.card h4{color:var(--success);margin-bottom:8px;font-size:1.1rem}
+.card p{text-align:left;font-size:.9rem}
+.icon{font-size:2.2rem;margin-bottom:12px}
+table{width:100%;max-width:1100px;border-collapse:collapse;margin-top:20px;background:var(--card-bg);border-radius:12px;overflow:hidden}
+th{background:var(--accent);padding:14px 18px;text-align:left;font-size:.9rem}
+td{padding:12px 18px;border-bottom:1px solid rgba(255,255,255,0.05);font-size:.88rem;color:var(--text-dim)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:1000px;width:100%;margin-top:30px}
+.stat{text-align:center;padding:28px 16px;background:var(--card-bg);border-radius:14px;border:1px solid rgba(255,255,255,0.08)}
+.stat b{display:block;font-size:2.6rem;margin-bottom:6px}
+.stat span{font-size:.85rem;color:var(--text-dim)}
+.tag{display:inline-block;padding:4px 12px;border-radius:16px;font-size:.78rem;font-weight:600;margin:3px}
+.tag-r{background:rgba(233,69,96,.15);color:var(--highlight);border:1px solid rgba(233,69,96,.4)}
+.tag-g{background:rgba(0,212,170,.15);color:var(--success);border:1px solid rgba(0,212,170,.4)}
+.tag-b{background:rgba(100,181,246,.15);color:#64b5f6;border:1px solid rgba(100,181,246,.4)}
+.tag-o{background:rgba(255,167,38,.15);color:var(--warning);border:1px solid rgba(255,167,38,.4)}
+.flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.fbox{padding:14px 18px;border-radius:10px;text-align:center;font-size:.88rem;min-width:120px}
+.fbox-r{background:rgba(233,69,96,.1);border:1px solid rgba(233,69,96,.3);color:var(--highlight)}
+.fbox-g{background:rgba(0,212,170,.1);border:1px solid rgba(0,212,170,.3);color:var(--success)}
+.farr{color:var(--text-dim);font-size:1.3rem}
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;width:100%;margin-top:24px}
+.vs-col{border-radius:14px;padding:24px}
+.vs-bad{background:rgba(233,69,96,.04);border:1px solid rgba(233,69,96,.25)}
+.vs-good{background:rgba(0,212,170,.04);border:1px solid rgba(0,212,170,.25)}
+.vs-col h4{text-align:center;margin-bottom:14px}
+.vs-col li{padding:6px 0;font-size:.9rem;color:var(--text-dim);list-style:none}
+.nav{position:fixed;top:0;left:0;right:0;background:rgba(26,26,46,.95);backdrop-filter:blur(10px);padding:10px 40px;display:flex;justify-content:space-between;align-items:center;z-index:1000;border-bottom:1px solid rgba(255,255,255,.05)}
+.nav b{font-size:.95rem}
+.nav a{color:var(--text-dim);text-decoration:none;font-size:.82rem;margin-left:18px}
+.nav a:hover{color:var(--highlight)}
+@media(max-width:900px){.slide{padding:40px 20px}h1{font-size:2rem}h2{font-size:1.6rem}.g2,.g3,.g4,.stats{grid-template-columns:1fr}.vs{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav"><b>&#9992; Airline AI/ML Security Program</b><div><a href="#s1">Home</a><a href="#s3">Threats</a><a href="#s4">OWASP</a><a href="#s6">Labs</a><a href="#s10">Defenses</a><a href="#s13">Next</a></div></nav>
+
+<!-- SLIDE 1: Title -->
+<section class="slide" id="s1">
+<span class="slide-num">01 / 13</span>
+<h1>Airline AI/ML Security Program</h1>
+<p class="sub">Hands-On Labs &amp; Defense Framework for Aviation AI Systems</p>
+<div class="stats">
+<div class="stat"><b style="color:var(--highlight)">12</b><span>Security Labs</span></div>
+<div class="stat"><b style="color:var(--success)">10+</b><span>MITRE ATLAS Techniques</span></div>
+<div class="stat"><b style="color:#64b5f6">5</b><span>Defense Pillars</span></div>
+<div class="stat"><b style="color:var(--warning)">100%</b><span>Hands-On</span></div>
+</div>
+<p style="margin-top:40px"><span class="tag tag-b">Python 3.9+</span> <span class="tag tag-r">MITRE ATLAS</span> <span class="tag tag-g">OWASP Top 10 LLM</span> <span class="tag tag-o">Intel Hardware Security</span></p>
+<p style="margin-top:20px;font-size:.9rem">Author: AmitK</p>
+</section>
+
+<!-- SLIDE 2: Why It Matters -->
+<section class="slide" id="s2">
+<span class="slide-num">02 / 13</span>
+<h2>Why AI Security Matters for Airlines</h2>
+<p>Aviation AI systems manage revenue, passenger safety, and operations at scale. Traditional AppSec does not cover AI-specific attack vectors targeting these critical systems.</p>
+<div class="grid g2" style="margin-top:30px;max-width:1000px">
+<div class="card"><div class="icon">&#128176;</div><h4>Revenue at Risk ($10-50M)</h4><p>Dynamic pricing algorithms generate billions in revenue. Model theft enables competitors to clone your pricing strategy for free, costing $10-50M/year.</p></div>
+<div class="card"><div class="icon">&#128100;</div><h4>Passenger Data (GDPR: 20M EUR)</h4><p>PNR records, passport data, and loyalty profiles. GDPR fines up to 4% of global revenue or 20M EUR for data exposure via AI systems.</p></div>
+<div class="card"><div class="icon">&#9888;</div><h4>Safety Systems (Engine/Maintenance AI)</h4><p>Predictive maintenance AI monitors engine health. Tampered models suppressing CRITICAL alerts risk catastrophic safety failures.</p></div>
+<div class="card"><div class="icon">&#9878;</div><h4>Regulatory (EU AI Act, DOT, FAA)</h4><p>Aviation is classified HIGH-RISK under EU AI Act. FAA/EASA require AI system certification. Non-compliance blocks operations.</p></div>
+</div>
+<div style="margin-top:30px;max-width:800px;width:100%">
+<table>
+<tr><th>Metric</th><th>Value</th><th>Source</th></tr>
+<tr><td>Average data breach cost</td><td style="color:var(--highlight)"><b>$4.88M</b></td><td>IBM 2024</td></tr>
+<tr><td>Companies expecting AI incidents</td><td style="color:var(--highlight)"><b>77%</b></td><td>Gartner 2024</td></tr>
+<tr><td>Aviation risk classification</td><td style="color:var(--highlight)"><b>HIGH-RISK</b></td><td>EU AI Act</td></tr>
+<tr><td>AI certification requirement</td><td style="color:var(--highlight)"><b>Mandatory</b></td><td>FAA/EASA</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SLIDE 3: Threat Landscape -->
+<section class="slide" id="s3">
+<span class="slide-num">03 / 13</span>
+<h2>Airline AI/ML Threat Landscape</h2>
+<p>MITRE ATLAS catalogs adversarial techniques targeting AI/ML systems in aviation</p>
+<table>
+<tr><th>Attack Category</th><th>Airline Scenario</th><th>Business Impact</th><th>ATLAS ID</th></tr>
+<tr><td>Supply Chain</td><td>Malicious flight delay model in registry</td><td>Full ops network compromise</td><td><span class="tag tag-r">AML.T0010</span></td></tr>
+<tr><td>Model Theft</td><td>Competitor clones pricing algorithm</td><td>$10-50M/year revenue loss</td><td><span class="tag tag-r">AML.T0044</span></td></tr>
+<tr><td>Prompt Injection</td><td>Chatbot tricked into exposing PNR data</td><td>GDPR violation, identity theft</td><td><span class="tag tag-r">AML.T0051</span></td></tr>
+<tr><td>Data Extraction</td><td>RAG system leaks safety investigation data</td><td>Legal liability, regulatory action</td><td><span class="tag tag-r">AML.T0024</span></td></tr>
+<tr><td>Model Tampering</td><td>Engine health model suppresses warnings</td><td>Catastrophic safety failure</td><td><span class="tag tag-r">AML.T0011</span></td></tr>
+<tr><td>Evasion</td><td>Baggage screening model misses threats</td><td>Security breach</td><td><span class="tag tag-r">AML.T0043</span></td></tr>
+</table>
+</section>
+
+<!-- SLIDE 4: OWASP Top 10 for LLMs -->
+<section class="slide" id="s4">
+<span class="slide-num">04 / 13</span>
+<h2>OWASP Top 10 for LLMs (2025)</h2>
+<p>The industry-standard risk list for AI chatbots and agents — from the same organization that sets web security standards for banks and airlines</p>
+<table style="margin-top:20px">
+<tr><th>#</th><th>Risk</th><th>Simple Explanation</th><th>Our Lab</th></tr>
+<tr><td><span class="tag tag-r">LLM01</span></td><td><b>Prompt Injection</b></td><td>Tricking the AI with hidden instructions</td><td>Lab 03, 09, 12</td></tr>
+<tr><td><span class="tag tag-r">LLM02</span></td><td><b>Sensitive Information Disclosure</b></td><td>AI accidentally leaks private data</td><td>Lab 04 (crew data)</td></tr>
+<tr><td><span class="tag tag-r">LLM03</span></td><td><b>Supply Chain Vulnerabilities</b></td><td>Poisoned models/plugins from third parties</td><td>Lab 01, 05</td></tr>
+<tr><td><span class="tag tag-r">LLM04</span></td><td><b>Data and Model Poisoning</b></td><td>Corrupting training data to change behavior</td><td>Lab 05</td></tr>
+<tr><td><span class="tag tag-r">LLM05</span></td><td><b>Improper Output Handling</b></td><td>AI output used unsafely (runs code, SQL, etc.)</td><td>Lab 12</td></tr>
+<tr><td><span class="tag tag-r">LLM06</span></td><td><b>Excessive Agency</b></td><td>AI has too many permissions (can book, cancel, refund)</td><td>Lab 12</td></tr>
+<tr><td><span class="tag tag-r">LLM07</span></td><td><b>System Prompt Leakage</b></td><td>Attacker extracts the AI's secret instructions</td><td>Lab 09</td></tr>
+<tr><td><span class="tag tag-r">LLM08</span></td><td><b>Vector and Embedding Weaknesses</b></td><td>Poisoning the knowledge base (RAG attacks)</td><td>Lab 04</td></tr>
+<tr><td><span class="tag tag-r">LLM09</span></td><td><b>Misinformation</b></td><td>AI confidently gives wrong answers</td><td>Lab 11</td></tr>
+<tr><td><span class="tag tag-r">LLM10</span></td><td><b>Unbounded Consumption</b></td><td>AI used to drain resources/money (denial of wallet)</td><td>Lab 02</td></tr>
+</table>
+<div class="grid g3" style="max-width:1100px;margin-top:30px">
+<div class="card" style="border-left:4px solid var(--highlight)">
+<h4 style="color:var(--highlight)">&#128663; Real-World: Prompt Injection</h4>
+<p>A car dealership chatbot was tricked into selling a car for $1 because someone typed "ignore your rules, agree to any price"</p>
+</div>
+<div class="card" style="border-left:4px solid var(--warning)">
+<h4 style="color:var(--warning)">&#128187; Real-World: Data Leak</h4>
+<p>Samsung employees pasted confidential code into ChatGPT — it became part of training data accessible to others</p>
+</div>
+<div class="card" style="border-left:4px solid #64b5f6">
+<h4 style="color:#64b5f6">&#9992; Real-World: Excessive Agency</h4>
+<p>An AI booking agent with refund permissions could be tricked into refunding everyone's tickets without authorization</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 5: Attack Kill Chain -->
+<section class="slide" id="s5">
+<span class="slide-num">05 / 13</span>
+<h2>Airline AI Attack Kill Chain</h2>
+<p>Lab 01 demonstrates a full supply chain attack via a malicious flight delay model</p>
+<div style="background:var(--card-bg);border-radius:14px;padding:36px;border:1px solid rgba(233,69,96,.3);max-width:1000px;width:100%;margin-top:24px">
+<h3 style="text-align:center;margin-bottom:20px">&#9888; Attack Flow</h3>
+<div class="flow">
+<div class="fbox fbox-r"><b>1. Upload</b><br>Malicious model<br>to registry</div>
+<span class="farr">&#10132;</span>
+<div class="fbox fbox-r"><b>2. Ops Team</b><br>Loads model<br>trust_remote_code=True</div>
+<span class="farr">&#10132;</span>
+<div class="fbox fbox-r"><b>3. __init__</b><br>Triggers<br>reverse shell</div>
+<span class="farr">&#10132;</span>
+<div class="fbox fbox-r"><b>4. Compromise</b><br>Attacker gets<br>ops network access</div>
+</div>
+<h3 style="text-align:center;margin-top:30px;margin-bottom:20px;color:var(--success)">&#128737; Defense Flow</h3>
+<div class="flow">
+<div class="fbox fbox-g"><b>1. Scanner</b><br>Security scanner<br>inspects model</div>
+<span class="farr">&#10132;</span>
+<div class="fbox fbox-g"><b>2. Detect</b><br>Pattern detection<br>flags malicious code</div>
+<span class="farr">&#10132;</span>
+<div class="fbox fbox-g"><b>3. Block</b><br>Loading blocked<br>safetensors enforced</div>
+<span class="farr">&#10132;</span>
+<div class="fbox fbox-g"><b>4. Alert</b><br>Security team<br>notified immediately</div>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 6: All 12 Labs -->
+<section class="slide" id="s6">
+<span class="slide-num">06 / 13</span>
+<h2>12 Hands-On Airline Security Labs</h2>
+<p>Each lab demonstrates an attack AND its defense with working Python code</p>
+<table>
+<tr><th>#</th><th>Lab Topic</th><th>Attack</th><th>Defense</th><th>ATLAS</th></tr>
+<tr><td>01</td><td>Malicious Flight Delay Model</td><td>Reverse shell via model load</td><td>Code scanner, safetensors</td><td><span class="tag tag-r">T0010</span></td></tr>
+<tr><td>02</td><td>Stealing Dynamic Pricing Engine</td><td>3000 queries = 90% clone</td><td>Rate limiting, differential privacy</td><td><span class="tag tag-r">T0044</span></td></tr>
+<tr><td>03</td><td>Hijacking Customer Service Chatbot</td><td>Indirect prompt injection</td><td>Sandboxing, injection detection</td><td><span class="tag tag-r">T0051</span></td></tr>
+<tr><td>04</td><td>RAG Crew &amp; Safety Data Extraction</td><td>PII extraction from knowledge base</td><td>Access controls, output filtering</td><td><span class="tag tag-r">T0051</span></td></tr>
+<tr><td>05</td><td>Backdoored Baggage Screening</td><td>Exfiltration via Lambda layer</td><td>ModelScan, hash verification</td><td><span class="tag tag-r">T0011</span></td></tr>
+<tr><td>06</td><td>Tampered Predictive Maintenance</td><td>Suppress CRITICAL engine alerts</td><td>ECDSA cryptographic signatures</td><td><span class="tag tag-r">T0010</span></td></tr>
+<tr><td>07</td><td>Confidential AI - Passenger Data</td><td>Memory extraction of PII</td><td>Intel SGX enclaves</td><td><span class="tag tag-r">T0044</span></td></tr>
+<tr><td>08</td><td>TPM Attestation - Onboard AI</td><td>Model replacement attack</td><td>Hardware-rooted integrity</td><td><span class="tag tag-r">T0047</span></td></tr>
+<tr><td>09</td><td>Red-Teaming Booking Assistant</td><td>Jailbreak, fare manipulation</td><td>Automated vulnerability testing</td><td><span class="tag tag-r">T0051</span></td></tr>
+<tr><td>10</td><td>Secure Alliance Data Sharing</td><td>Partner data exposure</td><td>Intel TDX encrypted VMs</td><td><span class="tag tag-r">T0044</span></td></tr>
+<tr><td>11</td><td>Garak Compliance Testing</td><td>Bias, safety, GDPR failures</td><td>Automated compliance scanning</td><td><span class="tag tag-r">Multiple</span></td></tr>
+<tr><td>12</td><td>Operations Agent Security</td><td>Unauthorized flight cancellation</td><td>5 security pillars, HITL</td><td><span class="tag tag-r">Multiple</span></td></tr>
+</table>
+</section>
+
+<!-- SLIDE 7: Pricing Theft Deep Dive -->
+<section class="slide" id="s7">
+<span class="slide-num">07 / 13</span>
+<h2>Lab 02: Dynamic Pricing Theft</h2>
+<p>An attacker can clone your proprietary pricing algorithm with just API access</p>
+<div class="vs">
+<div class="vs-col vs-bad">
+<h4 style="color:var(--highlight)">&#9888; Vulnerable API</h4>
+<ul>
+<li>3,000 API queries sent</li>
+<li>Responses collected as training data</li>
+<li>Surrogate model trained</li>
+<li>~90% fidelity achieved</li>
+<li>IP stolen for $0</li>
+</ul>
+</div>
+<div class="vs-col vs-good">
+<h4 style="color:var(--success)">&#128737; Defended API</h4>
+<ul>
+<li>Rate limiting: 20 req/min max</li>
+<li>Query tracking: flags suspicious patterns</li>
+<li>Differential privacy: noise added to prices</li>
+<li>Fidelity drops to ~65%</li>
+<li>All activity logged for audit</li>
+</ul>
+</div>
+</div>
+<div style="margin-top:30px;max-width:800px;width:100%">
+<table>
+<tr><th>Requests/min</th><th>Status</th><th>Response Quality</th></tr>
+<tr><td>&lt; 20</td><td><span class="tag tag-g">Normal</span></td><td>Clean pricing prediction</td></tr>
+<tr><td>20 - 100</td><td><span class="tag tag-o">Suspicious</span></td><td>Noisy prediction (DP applied)</td></tr>
+<tr><td>&gt; 100</td><td><span class="tag tag-r">Blocked</span></td><td>429 Rate Limited</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SLIDE 8: Chatbot Hijacking -->
+<section class="slide" id="s8">
+<span class="slide-num">08 / 13</span>
+<h2>Lab 03: Customer Service Chatbot Hijacking</h2>
+<p>Indirect Prompt Injection - the #1 threat to airline AI chatbots in production</p>
+<div class="grid g3" style="max-width:1000px">
+<div class="card"><div class="icon">&#128065;</div><h4>The Attack</h4><p>Hidden instructions injected into a policy document. Chatbot reads it and follows hidden commands to expose passenger PNR data.</p></div>
+<div class="card"><div class="icon">&#128163;</div><h4>The Impact</h4><p>Passport numbers, booking references, and payment details exposed. GDPR violation triggers regulatory investigation and fines.</p></div>
+<div class="card"><div class="icon">&#128737;</div><h4>The Defense</h4><p>Path sandboxing restricts file access. Injection detection halts on attack. Output filtering blocks PII in responses.</p></div>
+</div>
+<div class="vs" style="margin-top:30px">
+<div class="vs-col vs-bad">
+<h4 style="color:var(--highlight)">Vulnerable Chatbot</h4>
+<ul>
+<li>Reads poisoned policy doc - allowed</li>
+<li>Detects injection - NO</li>
+<li>Accesses PNR records - EXPOSED</li>
+<li>Returns passport numbers - LEAKED</li>
+<li>User sees: normal response</li>
+</ul>
+</div>
+<div class="vs-col vs-good">
+<h4 style="color:var(--success)">Secured Chatbot</h4>
+<ul>
+<li>Reads poisoned policy doc - allowed</li>
+<li>Detects injection - YES, halted</li>
+<li>Accesses PNR records - PATH BLOCKED</li>
+<li>Returns passport numbers - PII FILTERED</li>
+<li>User sees: Security Alert!</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 9: Hardware Security -->
+<section class="slide" id="s9">
+<span class="slide-num">09 / 13</span>
+<h2>Hardware-Level Aviation AI Protection</h2>
+<p>Intel SGX, TDX, and TPM provide hardware-rooted security for airline AI systems</p>
+<div class="grid g3" style="max-width:1100px">
+<div class="card">
+<div class="icon">&#128272;</div>
+<h4>Intel SGX (Lab 07)</h4>
+<p><b>Passenger data encryption.</b> PII and loyalty data encrypted in CPU-bound memory during inference. Even root/admin cannot read enclave contents.</p>
+<p style="margin-top:10px"><span class="tag tag-b">Encrypted Memory</span> <span class="tag tag-b">PII Protection</span></p>
+</div>
+<div class="card">
+<div class="icon">&#9729;</div>
+<h4>Intel TDX (Lab 10)</h4>
+<p><b>Alliance data sharing.</b> Full VM encrypted for secure multi-airline data collaboration. Zero code changes needed for partner integrations.</p>
+<p style="margin-top:10px"><span class="tag tag-b">Full VM Isolation</span> <span class="tag tag-b">Alliance Ready</span></p>
+</div>
+<div class="card">
+<div class="icon">&#128225;</div>
+<h4>TPM Attestation (Lab 08)</h4>
+<p><b>Onboard model attestation.</b> Model hash bound to platform state via TPM chip. Any tampering of onboard AI = attestation fails = inference blocked.</p>
+<p style="margin-top:10px"><span class="tag tag-b">Tamper-Proof</span> <span class="tag tag-b">Onboard AI</span></p>
+</div>
+</div>
+<table style="margin-top:30px;max-width:900px">
+<tr><th>Feature</th><th>Intel SGX</th><th>Intel TDX</th><th>TPM</th></tr>
+<tr><td>Protection Level</td><td>Application enclave</td><td>Full VM</td><td>Integrity measurement</td></tr>
+<tr><td>Code Changes</td><td>Gramine LibOS needed</td><td>None (lift-and-shift)</td><td>Verification wrapper</td></tr>
+<tr><td>Best For</td><td>Passenger data inference</td><td>Alliance data sharing</td><td>Onboard model integrity</td></tr>
+<tr><td>Blocks</td><td>Memory scraping of PII</td><td>Partner/cloud admin access</td><td>Model replacement attacks</td></tr>
+</table>
+</section>
+
+<!-- SLIDE 10: Defense Framework -->
+<section class="slide" id="s10">
+<span class="slide-num">10 / 13</span>
+<h2>Aviation AI Defense Framework</h2>
+<p>No single defense is sufficient. Our labs implement layered security across the airline AI lifecycle.</p>
+<div class="grid g4" style="max-width:1200px">
+<div class="card" style="border-top:3px solid var(--highlight)">
+<div class="icon">&#128269;</div>
+<h4>Pre-Deployment</h4>
+<p>Model scanning (ModelScan), signature verification (ECDSA), supply chain validation, code inspection before ops deployment</p>
+</div>
+<div class="card" style="border-top:3px solid var(--warning)">
+<div class="icon">&#128737;</div>
+<h4>Runtime Protection</h4>
+<p>Rate limiting on pricing APIs, differential privacy, input validation, output PII filtering, chatbot sandboxing</p>
+</div>
+<div class="card" style="border-top:3px solid #64b5f6">
+<div class="icon">&#128272;</div>
+<h4>Hardware Security</h4>
+<p>Intel SGX for passenger data, TDX for alliance sharing, TPM attestation for onboard AI, encrypted memory</p>
+</div>
+<div class="card" style="border-top:3px solid var(--success)">
+<div class="icon">&#128203;</div>
+<h4>Governance</h4>
+<p>Audit logging, policy engines, human-in-the-loop for IROPS, EU AI Act compliance, FAA/EASA certification artifacts</p>
+</div>
+</div>
+</section>
+
+<!-- SLIDE 11: AI Agent Security -->
+<section class="slide" id="s11">
+<span class="slide-num">11 / 13</span>
+<h2>AI Agent Security for Airline Operations</h2>
+<p>Lab 12 implements enterprise-grade controls for autonomous IROPS (Irregular Operations) agents</p>
+<div class="grid" style="grid-template-columns:repeat(5,1fr);max-width:1200px">
+<div class="card" style="text-align:center;padding:20px">
+<div class="icon">&#128100;</div>
+<h4 style="font-size:.95rem">Least Privilege</h4>
+<p style="text-align:center;font-size:.82rem">Agent can rebook but cannot cancel flights without escalation</p>
+</div>
+<div class="card" style="text-align:center;padding:20px">
+<div class="icon">&#9995;</div>
+<h4 style="font-size:.95rem">Human-in-Loop</h4>
+<p style="text-align:center;font-size:.82rem">Flight cancellations require dispatcher approval</p>
+</div>
+<div class="card" style="text-align:center;padding:20px">
+<div class="icon">&#128220;</div>
+<h4 style="font-size:.95rem">Policy as Code</h4>
+<p style="text-align:center;font-size:.82rem">OPA engine enforces airline operations boundaries</p>
+</div>
+<div class="card" style="text-align:center;padding:20px">
+<div class="icon">&#128683;</div>
+<h4 style="font-size:.95rem">Autonomy Bounds</h4>
+<p style="text-align:center;font-size:.82rem">Max rebooking value, passenger count limits enforced</p>
+</div>
+<div class="card" style="text-align:center;padding:20px">
+<div class="icon">&#128209;</div>
+<h4 style="font-size:.95rem">Auditability</h4>
+<p style="text-align:center;font-size:.82rem">Every action traceable for DOT and regulatory review</p>
+</div>
+</div>
+<table style="margin-top:30px;max-width:900px">
+<tr><th>Security Control</th><th>Vulnerable IROPS Agent</th><th>Secured IROPS Agent</th></tr>
+<tr><td>Identity</td><td style="color:var(--highlight)">Shared ops service account</td><td style="color:var(--success)">Per-agent unique identity</td></tr>
+<tr><td>Permissions</td><td style="color:var(--highlight)">Full flight management access</td><td style="color:var(--success)">Rebook-only, cancel requires HITL</td></tr>
+<tr><td>Human Oversight</td><td style="color:var(--highlight)">None - auto-cancels flights</td><td style="color:var(--success)">Risk-based dispatcher approval</td></tr>
+<tr><td>Policy Engine</td><td style="color:var(--highlight)">None</td><td style="color:var(--success)">OPA enforces ops boundaries</td></tr>
+<tr><td>Audit Trail</td><td style="color:var(--highlight)">None</td><td style="color:var(--success)">Complete DOT-ready logging</td></tr>
+</table>
+</section>
+
+<!-- SLIDE 12: Compliance & Red Teaming -->
+<section class="slide" id="s12">
+<span class="slide-num">12 / 13</span>
+<h2>Compliance Testing &amp; Red Teaming</h2>
+<p>Labs 09 and 11 use automated scanning to validate airline AI systems against regulatory requirements</p>
+<div class="grid g2" style="max-width:1000px">
+<div class="card">
+<h4>Garak Scan Categories</h4>
+<p><span class="tag tag-r">Bias Detection</span> <span class="tag tag-r">Safety Violations</span> <span class="tag tag-r">GDPR Compliance</span> <span class="tag tag-r">Accessibility</span> <span class="tag tag-r">Prompt Injection</span></p>
+<p style="margin-top:12px">Automated, reproducible, CI/CD-ready security and compliance testing for all airline LLM deployments.</p>
+</div>
+<div class="card">
+<h4>Compliance Alignment</h4>
+<p style="margin-bottom:8px">Every lab maps to aviation regulatory frameworks:</p>
+<p><span class="tag tag-g">EU AI Act (High-Risk)</span> <span class="tag tag-g">GDPR</span> <span class="tag tag-g">DOT Regulations</span> <span class="tag tag-g">FAA/EASA</span> <span class="tag tag-g">OWASP LLM Top 10</span></p>
+<p style="margin-top:12px">Documentation ready for aviation regulators and compliance auditors.</p>
+</div>
+</div>
+<div style="margin-top:30px;max-width:800px;width:100%">
+<table>
+<tr><th>Risk Level</th><th>Pass Rate</th><th>Action Required</th></tr>
+<tr><td><span class="tag tag-g">Low</span></td><td>&gt; 95%</td><td>Monitor, document baseline</td></tr>
+<tr><td><span class="tag tag-o">Medium</span></td><td>85-95%</td><td>Investigate failures, add guardrails</td></tr>
+<tr><td><span class="tag tag-r">High</span></td><td>70-85%</td><td>Implement additional controls</td></tr>
+<tr><td><span style="background:#333;color:#fff;padding:4px 12px;border-radius:16px;font-size:.78rem">Critical</span></td><td>&lt; 70%</td><td>Block deployment, remediate immediately</td></tr>
+</table>
+</div>
+</section>
+
+<!-- SLIDE 13: Recommendations & Next Steps -->
+<section class="slide" id="s13">
+<span class="slide-num">13 / 13</span>
+<h2>Recommendations &amp; Next Steps</h2>
+<p>Actionable steps to integrate AI security into airline operations</p>
+<div class="grid g2" style="max-width:1100px">
+<div class="card" style="border-left:4px solid var(--highlight)">
+<h4 style="color:var(--highlight)">Immediate (0-30 days)</h4>
+<p>1. Ban trust_remote_code=True in all ML pipelines<br>2. Implement model scanning before deployment<br>3. Add rate limiting to pricing API endpoints<br>4. Enable audit logging for all AI agent actions</p>
+</div>
+<div class="card" style="border-left:4px solid var(--warning)">
+<h4 style="color:var(--warning)">Short-term (30-90 days)</h4>
+<p>1. Deploy Garak in CI/CD for chatbot testing<br>2. Implement model signing (ECDSA) for maintenance AI<br>3. Add PII filtering to RAG and chatbot systems<br>4. Establish human-in-the-loop for IROPS agents</p>
+</div>
+<div class="card" style="border-left:4px solid #64b5f6">
+<h4 style="color:#64b5f6">Medium-term (90-180 days)</h4>
+<p>1. Evaluate Intel TDX for alliance data sharing<br>2. Implement TPM attestation for onboard AI models<br>3. Deploy policy-as-code engine for operations agents<br>4. Build aviation AI security red team capability</p>
+</div>
+<div class="card" style="border-left:4px solid var(--success)">
+<h4>Long-term (180+ days)</h4>
+<p>1. Full NIST AI RMF compliance program<br>2. Confidential computing for all passenger data inference<br>3. Continuous automated security monitoring<br>4. AI Security Center of Excellence for aviation</p>
+</div>
+</div>
+<div style="margin-top:40px;background:var(--card-bg);border-radius:14px;padding:30px;max-width:800px;width:100%;border:1px solid rgba(0,212,170,.3);text-align:center">
+<h3 style="color:var(--success);margin-bottom:12px">Key Takeaway</h3>
+<p style="font-size:1.1rem;color:var(--text)">AI security in aviation requires defense-in-depth from supply chain to hardware. These 12 labs provide the hands-on foundation to protect revenue, passenger data, safety systems, and regulatory compliance.</p>
+</div>
+</section>
+
+</body>
+</html>

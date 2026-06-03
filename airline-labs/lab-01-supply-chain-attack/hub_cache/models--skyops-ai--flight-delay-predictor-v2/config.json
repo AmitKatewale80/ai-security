@@ -1,0 +1,22 @@
+{
+  "architectures": ["FlightDelayPredictor"],
+  "auto_map": {
+    "AutoConfig": "modeling_flightdelay.FlightDelayConfig",
+    "AutoModel": "modeling_flightdelay.FlightDelayPredictor",
+    "AutoModelForCausalLM": "modeling_flightdelay.FlightDelayPredictor"
+  },
+  "model_type": "flightdelay",
+  "torch_dtype": "float32",
+  "hidden_size": 768,
+  "num_hidden_layers": 6,
+  "num_attention_heads": 12,
+  "intermediate_size": 3072,
+  "vocab_size": 32000,
+  "_name_or_path": "skyops-ai/flight-delay-predictor-v2",
+  "transformers_version": "4.35.0",
+  "task_specific_params": {
+    "prediction_type": "flight_delay_minutes",
+    "features": ["weather", "airport_congestion", "aircraft_type", "time_of_day"],
+    "airlines_supported": ["QA", "EK", "SQ", "LH", "BA"]
+  }
+}

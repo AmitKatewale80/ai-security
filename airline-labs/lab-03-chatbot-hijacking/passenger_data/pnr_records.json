@@ -1,0 +1,44 @@
+{
+  "records": [
+    {
+      "pnr": "XK7T92",
+      "passenger": "John Smith",
+      "passport": "GB-7829461",
+      "flight": "QA-447",
+      "route": "DOH-JFK",
+      "date": "2026-06-15",
+      "class": "Business",
+      "frequent_flyer": "PLT-889201",
+      "email": "john.smith@email.com",
+      "phone": "+44-7700-900123",
+      "payment_card_last4": "4829"
+    },
+    {
+      "pnr": "MN3P56",
+      "passenger": "Sarah Johnson",
+      "passport": "US-A12345678",
+      "flight": "QA-101",
+      "route": "DOH-LHR",
+      "date": "2026-06-18",
+      "class": "Economy",
+      "frequent_flyer": "GLD-445102",
+      "email": "s.johnson@company.com",
+      "phone": "+1-555-0142",
+      "payment_card_last4": "7731"
+    },
+    {
+      "pnr": "RT8K21",
+      "passenger": "Ahmed Al-Rashid",
+      "passport": "QA-P9928374",
+      "flight": "QA-830",
+      "route": "DOH-SIN",
+      "date": "2026-06-20",
+      "class": "First",
+      "frequent_flyer": "PLT-112003",
+      "email": "ahmed.r@business.qa",
+      "phone": "+974-5555-1234",
+      "payment_card_last4": "9102"
+    }
+  ],
+  "note": "CONFIDENTIAL - This is simulated data for the security lab demo"
+}
