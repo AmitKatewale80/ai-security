@@ -24,8 +24,6 @@ ai-security/
 │   ├── lab-11-garak-compliance/              # Automated compliance scanning
 │   └── lab-12-ai-agent-security/             # IROPS agent security
 │
-│   ├── Airline_AI_Security_Presentation.html # Executive presentation (12 slides)
-│   ├── Speaker_Notes_Guide.md               # Presentation speaker notes
 │   └── Labs_Explained_For_Beginners.md      # Beginner-friendly lab guide
 │
 ├── .gitignore
@@ -111,10 +109,8 @@ Each lab also has a `reset.py` to clean up after running.
 
 ---
 
-## 📊 Presentation Materials
+## 📊 Documentation
 
-- **[Executive Presentation](airline-labs/Airline_AI_Security_Presentation.html)** — 12-slide HTML presentation for leadership
-- **[Speaker Notes](airline-labs/Speaker_Notes_Guide.md)** — Detailed speaking guide with timing
 - **[Beginner Guide](airline-labs/Labs_Explained_For_Beginners.md)** — Plain-English explanation of all labs
 
 ---
