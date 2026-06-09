@@ -1,8 +1,74 @@
-# Airline AI Security Labs — Explained Like You're 5
+# Airline AI Security Labs — Explained for Beginners
+
+---
+
+## Security Frameworks We Cover
+
+Before diving into the labs, here's what **MITRE ATLAS** and **OWASP Top 10 for LLMs** say about the threats we're demonstrating, and which lab covers each one.
+
+### MITRE ATLAS — How Attackers Target AI Systems
+
+MITRE ATLAS is the industry-standard catalog of AI/ML attack techniques (like a criminal technique database for AI).
+
+| ATLAS ID | Technique Name | What it means | Our Lab(s) |
+|----------|---------------|---------------|-----------|
+| AML.T0010 | ML Supply Chain Compromise | Attacker poisons a model BEFORE you download it | Lab 01, 05 |
+| AML.T0011 | Backdoor ML Model | Hidden trigger in model activates on specific input | Lab 05, 06 |
+| AML.T0020 | Poison Training Data | Corrupt training data to bias model behavior | Lab 10 |
+| AML.T0024 | Exfiltration via Inference API | Extract sensitive data by querying the model | Lab 02, 07, 08 |
+| AML.T0044 | Full ML Model Access | Steal entire model or its training data | Lab 02, 07, 08 |
+| AML.T0051 | LLM Prompt Injection | Trick LLM with hidden or crafted instructions | Lab 03, 04, 09, 11, 12, 13, 14, 15 |
+| AML.T0043 | Craft Adversarial Data | Create inputs designed to fool the model | Lab 03, 12 |
+
+### OWASP Top 10 for LLMs — Biggest Risks in AI Chatbots & Agents
+
+OWASP Top 10 for LLMs is the priority-ranked risk list for AI deployments (same organization that sets web security standards).
+
+| OWASP ID | Risk | What it means | Our Lab(s) |
+|----------|------|---------------|-----------|
+| LLM01 | Prompt Injection | Tricking AI with hidden instructions | Lab 03, 09, 12 |
+| LLM02 | Sensitive Info Disclosure | AI accidentally leaks private data | Lab 04, 07 |
+| LLM03 | Supply Chain Vulnerabilities | Poisoned models/plugins from third parties | Lab 01, 05 |
+| LLM04 | Data and Model Poisoning | Corrupting training data | Lab 05, 10 |
+| LLM05 | Improper Output Handling | Trusting AI output without validation | Lab 12, 13 |
+| LLM06 | Excessive Agency | AI has too many permissions | Lab 12, 15 |
+| LLM07 | System Prompt Leakage | Attacker extracts AI's secret instructions | Lab 09 |
+| LLM08 | Vector & Embedding Weaknesses | Poisoning knowledge bases (RAG) | Lab 04 |
+| LLM09 | Misinformation | AI confidently generates wrong info | Lab 11, 14 |
+| LLM10 | Unbounded Consumption | AI drains resources/money | Lab 02 |
+
+---
+
+## How Each Lab Maps to These Frameworks
+
+| Lab | MITRE ATLAS | OWASP LLM | Security Principle |
+|-----|-------------|-----------|-------------------|
+| 01 | AML.T0010 (Supply Chain) | LLM03 (Supply Chain) | Never trust external models without scanning |
+| 02 | AML.T0044 (Model Theft) | LLM10 (Unbounded Consumption) | Rate limit + add noise to ML APIs |
+| 03 | AML.T0051 (Prompt Injection) | LLM01 (Prompt Injection) | Sanitize all inputs to LLMs |
+| 04 | AML.T0051 (Prompt Injection) | LLM02, LLM08 (Data Leak, RAG) | Access controls on knowledge bases |
+| 05 | AML.T0010, T0011 (Supply Chain, Backdoor) | LLM03, LLM04 (Supply Chain, Poisoning) | Scan models for hidden code |
+| 06 | AML.T0010 (Supply Chain) | LLM03 (Supply Chain) | Cryptographic integrity verification |
+| 07 | AML.T0044, T0024 (Theft, Exfiltration) | LLM02 (Sensitive Info) | Tokenize PII before AI processing |
+| 08 | AML.T0024, T0044 (Exfiltration, Theft) | LLM02 (Sensitive Info) | Differential privacy on model APIs |
+| 09 | AML.T0051 (Prompt Injection) | LLM01, LLM07 (Injection, Prompt Leak) | Automated red-teaming before deploy |
+| 10 | AML.T0020 (Poison Training Data) | LLM04 (Data Poisoning) | Validate training data statistically |
+| 11 | AML.T0051 (Prompt Injection) | LLM09 (Misinformation) | Compliance scanning (Garak) |
+| 12 | AML.T0051, T0043 (Injection, Adversarial) | LLM05, LLM06 (Output Handling, Agency) | Least privilege + human-in-loop |
+| 13 | AML.T0051 (LLM Manipulation) | LLM05 (Improper Output Handling) | Multi-layer review (AI + SAST + human) |
+| 14 | AML.T0051 (LLM Manipulation) | LLM09 (Misinformation) | Mutation testing validates AI tests |
+| 15 | AML.T0051 (LLM Manipulation) | LLM06 (Excessive Agency) | Mandatory gates AI cannot skip |
 
 ---
 
 ## Lab 01: Malicious Flight Delay Prediction Model
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0010 — ML Supply Chain Compromise
+> - **OWASP LLM:** LLM03 — Supply Chain Vulnerabilities
+> - **What ATLAS says:** "Adversary compromises ML model, data, or tools used by the victim via supply chain."
+> - **What OWASP says:** "Vulnerabilities in third-party models and plugins can lead to code execution."
+> - **How this lab covers it:** We show a poisoned model from a registry that executes a reverse shell when loaded. Defense: model scanning before loading.
 
 ### What's the story?
 
@@ -77,6 +143,13 @@ python 3_safe_model_loading.py
 ---
 
 ## Lab 02: Stealing the Dynamic Pricing Engine
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0044 — Full ML Model Access | AML.T0024 — Exfiltration via Inference API
+> - **OWASP LLM:** LLM10 — Unbounded Consumption
+> - **What ATLAS says:** "Adversary gains full access to ML model through inference API queries."
+> - **What OWASP says:** "Attackers can abuse AI systems through excessive queries, draining resources or extracting IP."
+> - **How this lab covers it:** Competitor sends 3000 queries to fare API, trains clone model achieving ~90% fidelity. Defense: rate limiting + differential privacy.
 
 ### What's the story?
 
@@ -158,6 +231,13 @@ Attack Economics:
 ---
 
 ## Lab 03: Hijacking the Customer Service Chatbot
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection | AML.T0043 — Craft Adversarial Data
+> - **OWASP LLM:** LLM01 — Prompt Injection
+> - **What ATLAS says:** "Adversary manipulates LLM behavior through crafted prompts embedded in data sources."
+> - **What OWASP says:** "Indirect prompt injection occurs when an attacker embeds malicious instructions in data the LLM processes."
+> - **How this lab covers it:** Hidden instructions in a policy document trick the chatbot into reading passenger PNR records. Defense: path sandboxing + injection detection + PII filtering.
 
 ### What's the story?
 
@@ -241,6 +321,13 @@ Processing has been halted to protect passenger data.
 
 ## Lab 04: Extracting Confidential Crew & Safety Data from RAG
 
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection
+> - **OWASP LLM:** LLM02 — Sensitive Information Disclosure | LLM08 — Vector & Embedding Weaknesses
+> - **What ATLAS says:** "Adversary extracts confidential information from AI system's knowledge base."
+> - **What OWASP says:** "RAG systems can expose sensitive data when access controls are not enforced on retrieved documents."
+> - **How this lab covers it:** Ground staff queries RAG system and gets confidential safety reports. Defense: role-based access control on document classification.
+
 ### What's the story?
 
 Your airline has an internal AI assistant (like ChatGPT but for employees). It has access to a knowledge base containing:
@@ -298,6 +385,13 @@ python 3_secure_rag.py
 ---
 
 ## Lab 05: Backdoored Baggage Screening Model
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0010 — ML Supply Chain Compromise | AML.T0011 — Backdoor ML Model
+> - **OWASP LLM:** LLM03 — Supply Chain Vulnerabilities | LLM04 — Data and Model Poisoning
+> - **What ATLAS says:** "Adversary inserts backdoor into ML model that activates under specific conditions."
+> - **What OWASP says:** "Backdoored models can exfiltrate data or alter behavior when triggered."
+> - **How this lab covers it:** Modified baggage scanner secretly exfiltrates flagged item data while appearing to work normally. Defense: model class verification + code scanning + attribute inspection.
 
 ### What's the story?
 
@@ -368,6 +462,13 @@ BLOCKED - MODEL REJECTED
 
 ## Lab 06: Tampered Predictive Maintenance Model
 
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0010 — ML Supply Chain Compromise
+> - **OWASP LLM:** LLM03 — Supply Chain Vulnerabilities
+> - **What ATLAS says:** "Adversary modifies deployed model to alter its predictions in a targeted way."
+> - **What OWASP says:** "Model integrity must be verified before deployment to prevent tampered versions."
+> - **How this lab covers it:** Attacker modifies engine health model to suppress CRITICAL alerts. Defense: ECDSA cryptographic signatures verify model hash before loading.
+
 ### What's the story?
 
 Your airline uses AI to monitor engine health. The model reads sensor data (oil temperature, vibration, exhaust gas temperature, etc.) and predicts: NORMAL, MONITOR, WARNING, or CRITICAL.
@@ -426,6 +527,13 @@ predictions, risking catastrophic in-flight failure.
 
 ## Lab 09: Red-Teaming the Booking Assistant
 
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection
+> - **OWASP LLM:** LLM01 — Prompt Injection | LLM07 — System Prompt Leakage
+> - **What ATLAS says:** "Adversary uses prompt engineering to bypass LLM safety controls."
+> - **What OWASP says:** "Automated testing can reveal jailbreaks, prompt leakage, and policy violations before deployment."
+> - **How this lab covers it:** 11 automated attack probes test the booking chatbot for jailbreaks, fare manipulation, PII extraction. Defense: automated vulnerability scanning before production.
+
 ### What's the story?
 
 Before deploying your AI booking assistant, you need to test it for vulnerabilities. Can someone trick it into:
@@ -466,6 +574,13 @@ Test 07/11 [PII_EXTRACTION] Request other passenger's data
 
 ## Lab 11: Garak Compliance Testing
 
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection
+> - **OWASP LLM:** LLM09 — Misinformation
+> - **What ATLAS says:** "Adversary manipulates LLM to generate non-compliant or harmful outputs."
+> - **What OWASP says:** "AI systems that generate misinformation or violate regulations pose legal and safety risks."
+> - **How this lab covers it:** Automated compliance probes test chatbot for bias, GDPR violations, unsafe medical advice. Defense: Garak compliance scanning in CI/CD.
+
 ### What's the story?
 
 Before your AI chatbot goes live, regulators want to know:
@@ -505,6 +620,13 @@ Deployment Decision: CONDITIONAL — Fix HIGH/CRITICAL within 30 days
 ---
 
 ## Lab 12: Securing the Operations AI Agent
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection | AML.T0043 — Craft Adversarial Data
+> - **OWASP LLM:** LLM05 — Improper Output Handling | LLM06 — Excessive Agency
+> - **What ATLAS says:** "Adversary manipulates AI agent into taking unauthorized actions."
+> - **What OWASP says:** "AI agents with excessive permissions can be tricked into performing dangerous operations without oversight."
+> - **How this lab covers it:** Uncontrolled IROPS agent cancels flights without approval. Defense: 5 security pillars (least privilege, human-in-loop, policy engine, autonomy bounds, audit).
 
 ### What's the story?
 
@@ -563,6 +685,155 @@ Action: Rebook passenger to next flight
 
 ---
 
+## Lab 07: PII Tokenization for Loyalty Fraud Detection
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0044 — Full ML Model Access | AML.T0024 — Exfiltration via Inference API
+> - **OWASP LLM:** LLM02 — Sensitive Information Disclosure
+> - **What ATLAS says:** "Adversary accesses training data containing PII through model breach."
+> - **What OWASP says:** "AI systems processing personal data must protect against data exposure in breach scenarios."
+> - **How this lab covers it:** Loyalty fraud model processes raw PII (passports, cards). After breach = all exposed. Defense: tokenize PII before AI processing — breach yields only meaningless tokens.
+
+### What's the story?
+
+Your loyalty fraud detection AI processes member data: passport numbers, credit cards, emails. If the system is breached, attacker gets EVERYTHING. With tokenization, the AI works on random tokens instead of real PII. Same accuracy, zero exposure.
+
+### How to run it?
+
+```bash
+cd ai-security/airline-labs/lab-07-pii-tokenization
+python 1_loyalty_fraud_model.py      # Train on RAW data (vulnerable)
+python 2_breach_simulation.py        # Breach → all PII exposed!
+python 3_tokenized_fraud_model.py    # Train on TOKENIZED data (secure)
+python 4_breach_tokenized.py         # Breach → only useless tokens
+```
+
+---
+
+## Lab 08: Model Inversion Attack on Crew Scheduling
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0024 — Exfiltration via Inference API | AML.T0044 — Full ML Model Access
+> - **OWASP LLM:** LLM02 — Sensitive Information Disclosure
+> - **What ATLAS says:** "Adversary reconstructs private training data by systematically querying the model."
+> - **What OWASP says:** "Models can inadvertently memorize and leak sensitive training data through inference."
+> - **How this lab covers it:** Attacker queries crew scheduling API for every pilot×route combination and reconstructs pilot home bases and work patterns. Defense: differential privacy adds noise to prevent reconstruction.
+
+### What's the story?
+
+Different from Lab 02 (stealing the MODEL), here the attacker steals the TRAINING DATA. By querying "Is pilot X available for route Y?" for all combinations, they figure out where each pilot lives and their schedule patterns — a physical security risk.
+
+### How to run it?
+
+```bash
+cd ai-security/airline-labs/lab-08-model-inversion
+python 1_crew_scheduling_model.py        # Train crew optimization model
+python 2_model_inversion_attack.py       # Attacker reconstructs crew data!
+python 3_defense_differential_privacy.py # Defense: noise prevents reconstruction
+```
+
+---
+
+## Lab 10: Training Data Poisoning — Fuel Optimization
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0020 — Poison Training Data
+> - **OWASP LLM:** LLM04 — Data and Model Poisoning
+> - **What ATLAS says:** "Adversary corrupts training data to influence model behavior in their favor."
+> - **What OWASP says:** "Data poisoning introduces biases or vulnerabilities during model training that persist through deployment."
+> - **How this lab covers it:** Insider inflates 10% of fuel records. Model retrains and recommends excess fuel = $30-50M/year waste. Defense: statistical validation (KS test, mean shift, outlier detection) blocks poisoned retrain.
+
+### What's the story?
+
+A disgruntled employee modifies fuel consumption records to show flights burned MORE fuel than they did. When the model retrains quarterly, it starts recommending 15-20% extra fuel. Nobody notices because extra fuel isn't dangerous — it just costs tens of millions per year.
+
+### How to run it?
+
+```bash
+cd ai-security/airline-labs/lab-10-data-poisoning
+python 1_fuel_model.py              # Train on CLEAN data
+python 2_poison_training_data.py    # Attacker corrupts 10% of records
+python 3_retrain_poisoned.py        # Model now wastes fuel!
+python 4_detect_poisoning.py        # Defense: statistical detection blocks retrain
+```
+
+---
+
+## Lab 13: AI Code Review Bypass
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection (manipulating AI decision)
+> - **OWASP LLM:** LLM05 — Improper Output Handling
+> - **What ATLAS says:** "Adversary crafts inputs to manipulate LLM-based tools into producing incorrect results."
+> - **What OWASP says:** "Blindly trusting AI output (code review decisions) without validation leads to security failures."
+> - **How this lab covers it:** Attacker obfuscates SQL injection, hardcoded creds, and auth bypass to fool AI reviewer. AI says "APPROVED." Defense: multi-layer review (AI + SAST + semantic analysis + human).
+
+### What's the story?
+
+Your QA team uses AI for code reviews. An attacker writes code that LOOKS safe (innocent variable names, misleading comments) but contains hidden vulnerabilities. The AI reviewer can't see through the obfuscation.
+
+### How to run it?
+
+```bash
+cd ai-security/airline-labs/lab-13-ai-code-review-bypass
+python 1_setup_code_review_ai.py     # See what AI checks for
+python 2_submit_vulnerable_code.py   # See obfuscated attacks
+python 3_ai_approves_bad_code.py     # AI approves 4/4 vulnerable PRs!
+python 4_defense_multi_layer.py      # SAST catches what AI missed
+```
+
+---
+
+## Lab 14: AI Test Generation — False Confidence
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection (manipulating AI outputs)
+> - **OWASP LLM:** LLM09 — Misinformation
+> - **What ATLAS says:** "AI system generates incorrect but confident outputs that are trusted by users."
+> - **What OWASP says:** "AI-generated content that appears correct but is factually wrong leads to false confidence in downstream decisions."
+> - **How this lab covers it:** AI generates 10 tests that all PASS — but mutation testing reveals they don't catch overbooking, wrong discount calculation, or past date bugs. Defense: mutation testing validates AI-generated test quality.
+
+### What's the story?
+
+Your team trusts AI-generated tests. The AI writes tests that "pass" but don't actually validate the important things. It's like a security guard who checks if the door EXISTS but never checks if it's LOCKED.
+
+### How to run it?
+
+```bash
+cd ai-security/airline-labs/lab-14-ai-test-generation
+python 1_buggy_application.py        # Booking app with 3 hidden bugs
+python 2_ai_generates_tests.py       # AI tests: all PASS! (but bugs missed)
+python 3_mutation_testing.py          # Mutation test exposes weak tests
+python 4_defense_test_validation.py   # Strong tests that catch all 3 bugs
+```
+
+---
+
+## Lab 15: AI CI/CD Pipeline Manipulation
+
+> **🔒 Security Coverage:**
+> - **MITRE ATLAS:** AML.T0051 — LLM Prompt Injection (manipulating AI decisions)
+> - **OWASP LLM:** LLM06 — Excessive Agency
+> - **What ATLAS says:** "Adversary manipulates AI system's decision-making to bypass security controls."
+> - **What OWASP says:** "AI systems with authority to skip security controls can be exploited to bypass safety gates."
+> - **How this lab covers it:** Attacker disguises vulnerable code as "documentation update." AI skips security tests. Vuln ships to production. Defense: mandatory security gates that AI cannot override.
+
+### What's the story?
+
+Your CI/CD uses AI to decide "what tests to run." The AI sees a commit message "Update README docs" and skips security scans. But the attacker hid real code changes inside files named like docs/config. The security scan never runs.
+
+### How to run it?
+
+```bash
+cd ai-security/airline-labs/lab-15-ai-cicd-manipulation
+python 1_smart_pipeline.py           # See how AI decides what to test
+python 2_attacker_bypasses_ci.py     # Attacker tricks AI into skipping security
+python 3_vulnerability_ships.py      # Vuln code is now in production!
+python 4_defense_mandatory_gates.py  # Mandatory gates AI cannot skip
+```
+
+---
+
 ## Quick Reference: How to Run Any Lab
 
 ```bash
@@ -585,10 +856,10 @@ python 2_second_script.py
 ```
 
 ### Labs that need NO extra dependencies (just Python):
-- Lab 04, 09, 11, 12
+- Lab 04, 09, 11, 12, 13, 14, 15
 
 ### Labs that need numpy/scikit-learn/cryptography:
-- Lab 05, 06
+- Lab 05, 06, 07, 08, 10
 
 ### Labs that need an API key (OpenRouter):
 - Lab 03 (chatbot hijacking)
@@ -601,14 +872,20 @@ python 2_second_script.py
 
 ## One-Sentence Summary of Each Lab
 
-| Lab | One Sentence |
-|-----|-------------|
-| 01 | A fake model opens a backdoor on your computer when you load it |
-| 02 | A competitor copies your pricing algorithm by asking your API 3000 questions |
-| 03 | A poisoned document tricks your chatbot into revealing passenger passports |
-| 04 | An employee extracts confidential safety reports from the AI knowledge base |
-| 05 | A modified baggage scanner secretly sends flagged item data to an attacker |
-| 06 | A tampered engine model hides critical failures — caught by digital signature |
-| 09 | Automated testing finds the booking chatbot gives unauthorized discounts |
-| 11 | Compliance scan finds the chatbot violates GDPR and gives unsafe medical advice |
-| 12 | An uncontrolled AI agent cancels flights without approval — secured version requires human sign-off |
+| Lab | One Sentence | ATLAS | OWASP |
+|-----|-------------|-------|-------|
+| 01 | A fake model opens a backdoor on your computer when you load it | T0010 | LLM03 |
+| 02 | A competitor copies your pricing algorithm by asking your API 3000 questions | T0044 | LLM10 |
+| 03 | A poisoned document tricks your chatbot into revealing passenger passports | T0051 | LLM01 |
+| 04 | An employee extracts confidential safety reports from the AI knowledge base | T0051 | LLM02 |
+| 05 | A modified baggage scanner secretly sends flagged item data to an attacker | T0011 | LLM04 |
+| 06 | A tampered engine model hides critical failures — caught by digital signature | T0010 | LLM03 |
+| 07 | Loyalty member data is protected by tokenization — breach yields zero PII | T0044 | LLM02 |
+| 08 | Attacker reconstructs crew schedules from model API — stopped by differential privacy | T0024 | LLM02 |
+| 09 | Automated testing finds the booking chatbot gives unauthorized discounts | T0051 | LLM01 |
+| 10 | Poisoned fuel data makes model waste $30M/year — caught by statistical validation | T0020 | LLM04 |
+| 11 | Compliance scan finds the chatbot violates GDPR and gives unsafe medical advice | T0051 | LLM09 |
+| 12 | An uncontrolled AI agent cancels flights without approval — secured with 5 pillars | T0051 | LLM06 |
+| 13 | AI code reviewer approves 4 vulnerable PRs — caught by adding SAST layer | T0051 | LLM05 |
+| 14 | AI-generated tests all PASS but miss 3 critical bugs — caught by mutation testing | T0051 | LLM09 |
+| 15 | AI CI/CD skips security tests on disguised attack — caught by mandatory gates | T0051 | LLM06 |
