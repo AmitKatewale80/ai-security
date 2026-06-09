@@ -17,7 +17,10 @@ ai-security/
 │   ├── lab-04-rag-data-extraction/           # Crew manual data leak
 │   ├── lab-05-malicious-code-injection/      # Baggage screening backdoor
 │   ├── lab-06-model-signing/                 # Predictive maintenance integrity
+│   ├── lab-07-pii-tokenization/              # Loyalty fraud - PII protection
+│   ├── lab-08-model-inversion/               # Crew scheduling data extraction
 │   ├── lab-09-red-teaming/                   # Booking assistant red-teaming
+│   ├── lab-10-data-poisoning/                # Fuel optimization data corruption
 │   ├── lab-11-garak-compliance/              # Automated compliance scanning
 │   └── lab-12-ai-agent-security/             # IROPS agent security
 │
@@ -40,7 +43,10 @@ ai-security/
 | Lab 04 | Crew Operations Manual (RAG) | Data Extraction | AML.T0051 |
 | Lab 05 | Baggage Screening AI | Malicious Code Injection | AML.T0010, AML.T0011 |
 | Lab 06 | Predictive Maintenance Model | Model Tampering | AML.T0010, AML.T0011 |
+| Lab 07 | Loyalty Fraud Detection | PII Exposure (Tokenization Defense) | AML.T0044, AML.T0024 |
+| Lab 08 | Crew Scheduling | Model Inversion (Data Extraction) | AML.T0044, AML.T0024 |
 | Lab 09 | Booking Assistant | Red-Teaming & Jailbreaks | AML.T0051 |
+| Lab 10 | Fuel Optimization | Training Data Poisoning | AML.T0020 |
 | Lab 11 | Customer-Facing Chatbot | Compliance Violations | AML.T0051 |
 | Lab 12 | IROPS Recovery Agent | Agent Exploitation | AML.T0051, AML.T0043 |
 
@@ -97,6 +103,7 @@ Each lab also has a `reset.py` to clean up after running.
 | **Model Security** | Model scanning, signature verification, safe loading |
 | **API Protection** | Rate limiting, query detection, differential privacy |
 | **LLM Safety** | Input sanitization, output filtering, guardrails |
+| **Data Protection** | PII tokenization, data poisoning detection |
 | **Testing** | Red-teaming, Garak scanning, automated compliance |
 | **Agent Security** | Tool restrictions, human-in-the-loop, audit logging |
 
