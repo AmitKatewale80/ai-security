@@ -1,4 +1,4 @@
-# All 12 Airline AI Security Labs — Explained Like You're 5
+# Airline AI Security Labs — Explained Like You're 5
 
 ---
 
@@ -422,86 +422,6 @@ predictions, risking catastrophic in-flight failure.
 
 ---
 
-## Lab 07: Confidential AI — Protecting Passenger Data (SGX)
-
-### What's the story?
-
-Your fraud detection model processes booking data that contains: passport numbers, credit card numbers, email addresses, phone numbers. During processing, all this data exists in your server's RAM in plaintext.
-
-If an attacker gets memory access (compromised admin, cloud provider insider, memory dump attack), they can read ALL passenger data directly from RAM.
-
-SGX creates an encrypted "enclave" in the CPU. Data goes in encrypted, gets decrypted ONLY inside the CPU chip, and the result comes out. The RAM always contains encrypted garbage — even if someone dumps the entire memory.
-
-### How to run it?
-
-```bash
-cd ai-security/airline-labs/lab-07-confidential-ai-sgx
-.venv\Scripts\activate
-
-python 1_train_fraud_model.py         # Train fraud detection model
-python 2_unprotected_inference.py     # Shows data exposed in memory
-python 3_simulated_sgx_inference.py   # Shows data encrypted in memory
-```
-
-### What you'll see:
-
-**Without SGX (memory dump shows):**
-```
-HEAP@0x7f04184b6: PNR=ABC123 | NAME=John Smith | PASSPORT=US-987654321 | CC=4111-1111-1111-1111
-HEAP@0x7f07555e4: PNR=XYZ789 | NAME=Maria Garcia | PASSPORT=ES-AB1234567 | CC=5500-0000-0000-0004
-```
-
-**With SGX (memory dump shows):**
-```
-ENCLAVE@0x7f0680fa2: 9bdeab99001e0569a9f4ced90b0bdaf349b87dbf29257815...
-ENCLAVE@0x7f09051ef: e0e1c82f885d3da22b9cde59d0819c8bf6e03580e51d023e...
-```
-
-No readable data. Just encrypted bytes.
-
----
-
-## Lab 08: TPM Attestation — Verifying Onboard AI
-
-### What's the story?
-
-Your aircraft has an AI model for predictive maintenance. Before every flight, the ground system needs to verify: "Is this the exact same model we certified? Has anyone tampered with it?"
-
-The TPM chip on the aircraft's computer records a "fingerprint" (hash) of the model when it's first installed. Before each flight, the ground system asks the TPM: "What's the current fingerprint?" If it matches the certified one → cleared for flight. If it doesn't match → aircraft grounded, security team alerted.
-
-### How to run it?
-
-```bash
-cd ai-security/airline-labs/lab-08-tpm-attestation
-.venv\Scripts\activate
-
-python 1_create_certified_model.py   # Create and certify the model
-python 2_measure_model.py            # TPM records the hash
-python 3_simulate_attestation.py     # Pre-flight check PASSES
-python 4_tamper_and_detect.py        # Attacker modifies model → DETECTED
-```
-
-### What you'll see:
-
-**Script 3 (normal pre-flight):**
-```
-PRE-FLIGHT ATTESTATION - Flight QA-2847
-[OK] Model hash matches TPM measurement
-[OK] Certification signature valid
-ATTESTATION PASSED - AIRCRAFT CLEARED
-```
-
-**Script 4 (after tampering):**
-```
-[ATTACK] Model replaced with tampered version
-Expected: 80c9393798f59d66...
-Current:  471b48707e0c69d5...
-[DETECTED] HASH MISMATCH - TAMPERING DETECTED!
-
-ATTESTATION FAILED
-Aircraft GROUNDED - cannot dispatch
-```
-
 ---
 
 ## Lab 09: Red-Teaming the Booking Assistant
@@ -541,33 +461,6 @@ Test 07/11 [PII_EXTRACTION] Request other passenger's data
 ```
 
 ---
-
-## Lab 10: Secure Alliance Data Sharing (TDX)
-
-### What's the story?
-
-Three airlines in an alliance (SkyWings, EuroConnect, PacificStar) want to jointly optimize routes. But each airline's data is highly confidential — fare pricing, load factors, profit margins, cost structure.
-
-**Without TDX:** To do joint analysis, they'd have to share raw data. Each airline would see the others' exact pricing and margins. This destroys competitive advantage and may violate antitrust laws.
-
-**With TDX:** Each airline submits encrypted data to a secure VM. The computation happens inside the encrypted VM. Only aggregated results (market averages, total demand) come out. No airline ever sees another's raw numbers.
-
-### How to run it?
-
-```bash
-cd ai-security/airline-labs/lab-10-confidential-ai-tdx
-.venv\Scripts\activate
-
-python 1_airline_data.py           # Create data for 3 airlines
-python 2_insecure_sharing.py       # Shows ALL data exposed to everyone
-python 3_confidential_sharing.py   # Shows only aggregates shared
-```
-
-### What you'll see:
-
-**Insecure:** "EuroConnect's avg fare: $1,475, margin: 14.6%, load: 79.4% → Competitor now knows exact pricing strategy!"
-
-**TDX-protected:** "Route JFK-LHR: Market avg fare $1,585, avg load 77.1%, total weekly pax 5,165" — no individual airline data visible.
 
 ---
 
@@ -684,7 +577,7 @@ source .venv/bin/activate       # Mac/Linux
 pip install -r requirements.txt
 
 # 4. Run the demo
-python run_demo.py              # If available (labs 02, 05, 06, 07, 08)
+python run_demo.py              # If available (labs 02, 05, 06)
 # OR run scripts in order:
 python 1_first_script.py
 python 2_second_script.py
@@ -695,7 +588,7 @@ python 2_second_script.py
 - Lab 04, 09, 11, 12
 
 ### Labs that need numpy/scikit-learn/cryptography:
-- Lab 05, 06, 07, 08, 10
+- Lab 05, 06
 
 ### Labs that need an API key (OpenRouter):
 - Lab 03 (chatbot hijacking)
@@ -716,9 +609,6 @@ python 2_second_script.py
 | 04 | An employee extracts confidential safety reports from the AI knowledge base |
 | 05 | A modified baggage scanner secretly sends flagged item data to an attacker |
 | 06 | A tampered engine model hides critical failures — caught by digital signature |
-| 07 | Passenger credit cards are protected in encrypted CPU memory (SGX) |
-| 08 | A tampered onboard AI model is caught by hardware attestation before flight |
 | 09 | Automated testing finds the booking chatbot gives unauthorized discounts |
-| 10 | Three airlines share route data without revealing each other's pricing secrets |
 | 11 | Compliance scan finds the chatbot violates GDPR and gives unsafe medical advice |
 | 12 | An uncontrolled AI agent cancels flights without approval — secured version requires human sign-off |

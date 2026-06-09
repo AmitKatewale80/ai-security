@@ -15,3 +15,15 @@ knowledge_base/
 airline-labs/Airline_AI_Security_Presentation.html
 airline-labs/Speaker_Notes_Guide.md
 airline-labs/Personal Security Exolanation.md
+
+# Hardware-specific labs (removed from public repo)
+airline-labs/lab-07-confidential-ai-sgx/
+airline-labs/lab-08-tpm-attestation/
+airline-labs/lab-10-confidential-ai-tdx/
+
+# Old folders (not part of airline labs)
+labs/
+platform-security/
+examples/
+AI_Security_Presentation.html
+test_model_security.py
