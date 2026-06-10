@@ -118,7 +118,40 @@ Each lab also has a `reset.py` to clean up after running.
 
 ## 📊 Documentation
 
-- **[Beginner Guide](airline-labs/Labs_Explained_For_Beginners.md)** — Plain-English explanation of all labs
+### Security Frameworks Covered
+
+This lab program covers the top AI/ML security frameworks:
+
+**MITRE ATLAS** — 7 adversarial techniques:
+- AML.T0010: ML Supply Chain Compromise (Labs 01, 05)
+- AML.T0011: Backdoor ML Model (Labs 05, 06)
+- AML.T0020: Poison Training Data (Lab 10)
+- AML.T0024: Exfiltration via Inference API (Labs 02, 07, 08)
+- AML.T0044: Full ML Model Access (Labs 02, 07, 08)
+- AML.T0051: LLM Prompt Injection (Labs 03, 04, 09, 11-15)
+- AML.T0043: Craft Adversarial Data (Labs 03, 12)
+
+**OWASP Top 10 for LLMs** — All 10 risks covered:
+- LLM01 Prompt Injection → Labs 03, 09, 12
+- LLM02 Sensitive Info Disclosure → Labs 04, 07
+- LLM03 Supply Chain → Labs 01, 05
+- LLM04 Data Poisoning → Labs 05, 10
+- LLM05 Improper Output Handling → Labs 12, 13
+- LLM06 Excessive Agency → Labs 12, 15
+- LLM07 System Prompt Leakage → Lab 09
+- LLM08 Vector & Embedding Weaknesses → Lab 04
+- LLM09 Misinformation → Labs 11, 14
+- LLM10 Unbounded Consumption → Lab 02
+
+### Lab Categories
+
+| Category | Labs | Focus |
+|----------|------|-------|
+| Model Security | 01, 05, 06 | Supply chain, backdoors, integrity |
+| API Protection | 02, 07, 08 | Rate limiting, tokenization, privacy |
+| LLM Safety | 03, 04, 09, 11 | Prompt injection, RAG, compliance |
+| Operational AI | 10, 12 | Data poisoning, agent security |
+| DevSecOps | 13, 14, 15 | Code review, testing, CI/CD |
 
 ---
 
