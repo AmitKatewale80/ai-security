@@ -22,10 +22,7 @@ ai-security/
 │   ├── lab-09-red-teaming/                   # Booking assistant red-teaming
 │   ├── lab-10-data-poisoning/                # Fuel optimization data corruption
 │   ├── lab-11-garak-compliance/              # Automated compliance scanning
-│   ├── lab-12-ai-agent-security/             # IROPS agent security
-│   ├── lab-13-ai-code-review-bypass/         # AI code review exploitation
-│   ├── lab-14-ai-test-generation/            # AI test generation risks
-│   └── lab-15-ai-cicd-manipulation/          # CI/CD pipeline manipulation
+│   └── lab-12-ai-agent-security/             # IROPS agent security
 │
 │   └── Labs_Explained_For_Beginners.md      # Beginner-friendly lab guide
 │
@@ -52,9 +49,6 @@ ai-security/
 | Lab 10 | Fuel Optimization | Training Data Poisoning | AML.T0020 |
 | Lab 11 | Customer-Facing Chatbot | Compliance Violations | AML.T0051 |
 | Lab 12 | IROPS Recovery Agent | Agent Exploitation | AML.T0051, AML.T0043 |
-| Lab 13 | AI Code Review | Bypassing AI Review with Obfuscation | AML.T0051 |
-| Lab 14 | AI Test Generation | False Confidence from Weak Tests | AML.T0051 |
-| Lab 15 | AI CI/CD Pipeline | Tricking AI to Skip Security Gates | AML.T0051 |
 
 ---
 
@@ -112,46 +106,14 @@ Each lab also has a `reset.py` to clean up after running.
 | **Data Protection** | PII tokenization, data poisoning detection |
 | **Testing** | Red-teaming, Garak scanning, automated compliance |
 | **Agent Security** | Tool restrictions, human-in-the-loop, audit logging |
-| **QA & CI/CD** | AI code review validation, test mutation scoring, mandatory gates |
 
 ---
 
 ## 📊 Documentation
 
-### Security Frameworks Covered
+For full documentation on security frameworks, lab categories, and defense techniques:
 
-This lab program covers the top AI/ML security frameworks:
-
-**MITRE ATLAS** — 7 adversarial techniques:
-- AML.T0010: ML Supply Chain Compromise (Labs 01, 05)
-- AML.T0011: Backdoor ML Model (Labs 05, 06)
-- AML.T0020: Poison Training Data (Lab 10)
-- AML.T0024: Exfiltration via Inference API (Labs 02, 07, 08)
-- AML.T0044: Full ML Model Access (Labs 02, 07, 08)
-- AML.T0051: LLM Prompt Injection (Labs 03, 04, 09, 11-15)
-- AML.T0043: Craft Adversarial Data (Labs 03, 12)
-
-**OWASP Top 10 for LLMs** — All 10 risks covered:
-- LLM01 Prompt Injection → Labs 03, 09, 12
-- LLM02 Sensitive Info Disclosure → Labs 04, 07
-- LLM03 Supply Chain → Labs 01, 05
-- LLM04 Data Poisoning → Labs 05, 10
-- LLM05 Improper Output Handling → Labs 12, 13
-- LLM06 Excessive Agency → Labs 12, 15
-- LLM07 System Prompt Leakage → Lab 09
-- LLM08 Vector & Embedding Weaknesses → Lab 04
-- LLM09 Misinformation → Labs 11, 14
-- LLM10 Unbounded Consumption → Lab 02
-
-### Lab Categories
-
-| Category | Labs | Focus |
-|----------|------|-------|
-| Model Security | 01, 05, 06 | Supply chain, backdoors, integrity |
-| API Protection | 02, 07, 08 | Rate limiting, tokenization, privacy |
-| LLM Safety | 03, 04, 09, 11 | Prompt injection, RAG, compliance |
-| Operational AI | 10, 12 | Data poisoning, agent security |
-| DevSecOps | 13, 14, 15 | Code review, testing, CI/CD |
+- **[Documentation](airline-labs/DOCUMENTATION.md)** — Security frameworks, lab mappings, and defense catalog
 
 ---
 
