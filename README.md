@@ -25,7 +25,10 @@ ai-security/
 │   ├── lab-12-ai-agent-security/             # IROPS agent security
 │   ├── lab-13-ai-code-review-bypass/         # AI code review exploitation
 │   ├── lab-14-ai-test-generation/            # AI test generation risks
-│   └── lab-15-ai-cicd-manipulation/          # CI/CD pipeline manipulation
+│   ├── lab-15-ai-cicd-manipulation/          # CI/CD pipeline manipulation
+│   ├── lab-16-test-data-leakage/             # AI test data PII leakage
+│   ├── lab-17-bug-triage-manipulation/       # AI bug priority manipulation
+│   └── lab-18-test-input-injection/          # Prompt injection via test inputs
 │
 │   └── Labs_Explained_For_Beginners.md      # Beginner-friendly lab guide
 │
@@ -37,6 +40,8 @@ ai-security/
 ---
 
 ## 🧪 Labs Overview
+
+### Section A: Airline Operations Security (Labs 01–12)
 
 | Lab | Airline Scenario | Threat | MITRE ATLAS |
 |-----|-----------------|--------|-------------|
@@ -52,9 +57,17 @@ ai-security/
 | Lab 10 | Fuel Optimization | Training Data Poisoning | AML.T0020 |
 | Lab 11 | Customer-Facing Chatbot | Compliance Violations | AML.T0051 |
 | Lab 12 | IROPS Recovery Agent | Agent Exploitation | AML.T0051, AML.T0043 |
+
+### Section B: QA & DevSecOps Security (Labs 13–18)
+
+| Lab | QA Scenario | Threat | MITRE ATLAS |
+|-----|------------|--------|-------------|
 | Lab 13 | AI Code Review | Bypassing AI Review with Obfuscation | AML.T0051 |
 | Lab 14 | AI Test Generation | False Confidence from Weak Tests | AML.T0051 |
 | Lab 15 | AI CI/CD Pipeline | Tricking AI to Skip Security Gates | AML.T0051 |
+| Lab 16 | AI Test Data Generation | PII Leakage in Synthetic Data | AML.T0024 |
+| Lab 17 | AI Bug Triage | Manipulating Priority Classification | AML.T0051 |
+| Lab 18 | AI Test Runner | Prompt Injection via App Responses | AML.T0051 |
 
 ---
 
