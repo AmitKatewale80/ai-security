@@ -22,7 +22,10 @@ ai-security/
 │   ├── lab-09-red-teaming/                   # Booking assistant red-teaming
 │   ├── lab-10-data-poisoning/                # Fuel optimization data corruption
 │   ├── lab-11-garak-compliance/              # Automated compliance scanning
-│   └── lab-12-ai-agent-security/             # IROPS agent security
+│   ├── lab-12-ai-agent-security/             # IROPS agent security
+│   ├── lab-13-ai-code-review-bypass/         # AI code review exploitation
+│   ├── lab-14-ai-test-generation/            # AI test generation risks
+│   └── lab-15-ai-cicd-manipulation/          # CI/CD pipeline manipulation
 │
 │   └── Labs_Explained_For_Beginners.md      # Beginner-friendly lab guide
 │
@@ -49,6 +52,9 @@ ai-security/
 | Lab 10 | Fuel Optimization | Training Data Poisoning | AML.T0020 |
 | Lab 11 | Customer-Facing Chatbot | Compliance Violations | AML.T0051 |
 | Lab 12 | IROPS Recovery Agent | Agent Exploitation | AML.T0051, AML.T0043 |
+| Lab 13 | AI Code Review | Bypassing AI Review with Obfuscation | AML.T0051 |
+| Lab 14 | AI Test Generation | False Confidence from Weak Tests | AML.T0051 |
+| Lab 15 | AI CI/CD Pipeline | Tricking AI to Skip Security Gates | AML.T0051 |
 
 ---
 
@@ -106,6 +112,7 @@ Each lab also has a `reset.py` to clean up after running.
 | **Data Protection** | PII tokenization, data poisoning detection |
 | **Testing** | Red-teaming, Garak scanning, automated compliance |
 | **Agent Security** | Tool restrictions, human-in-the-loop, audit logging |
+| **DevSecOps** | AI code review validation, test mutation scoring, mandatory gates |
 
 ---
 

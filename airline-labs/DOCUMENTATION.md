@@ -2,7 +2,7 @@
 
 ## Overview
 
-12 hands-on labs demonstrating AI/ML security threats and defenses in airline operations. Each lab shows a real attack scenario and its corresponding defense mechanism.
+15 hands-on labs demonstrating AI/ML security threats and defenses in airline operations and DevSecOps. Each lab shows a real attack scenario and its corresponding defense mechanism.
 
 ---
 
@@ -17,7 +17,7 @@
 | AML.T0020 | Poison Training Data | 10 |
 | AML.T0024 | Exfiltration via Inference API | 02, 07, 08 |
 | AML.T0044 | Full ML Model Access | 02, 07, 08 |
-| AML.T0051 | LLM Prompt Injection | 03, 04, 09, 11, 12 |
+| AML.T0051 | LLM Prompt Injection | 03, 04, 09, 11-15 |
 | AML.T0043 | Craft Adversarial Data | 03, 12 |
 
 ### OWASP Top 10 for LLMs (All 10 Covered)
@@ -28,11 +28,11 @@
 | LLM02 | Sensitive Info Disclosure | 04, 07 |
 | LLM03 | Supply Chain Vulnerabilities | 01, 05 |
 | LLM04 | Data and Model Poisoning | 05, 10 |
-| LLM05 | Improper Output Handling | 12 |
-| LLM06 | Excessive Agency | 12 |
+| LLM05 | Improper Output Handling | 12, 13 |
+| LLM06 | Excessive Agency | 12, 15 |
 | LLM07 | System Prompt Leakage | 09 |
 | LLM08 | Vector & Embedding Weaknesses | 04 |
-| LLM09 | Misinformation | 11 |
+| LLM09 | Misinformation | 11, 14 |
 | LLM10 | Unbounded Consumption | 02 |
 
 ---
@@ -60,6 +60,11 @@
 - Least privilege, human-in-the-loop, policy-as-code
 - Autonomy bounds and audit logging
 
+### DevSecOps & CI/CD (Labs 13, 14, 15)
+- Multi-layer code review (AI + SAST + human)
+- Mutation testing for AI-generated test validation
+- Mandatory security gates in AI-powered pipelines
+
 ---
 
 ## Labs Summary
@@ -78,6 +83,9 @@
 | 10 | Fuel Optimization | Poisoned training data (+15% fuel) | Statistical validation (KS test) |
 | 11 | Compliance | GDPR, bias, safety violations | Garak scanning in CI/CD |
 | 12 | IROPS Agent | Unauthorized flight cancellation | 5 security pillars |
+| 13 | Code Review | AI approves obfuscated vulns | AI + SAST + semantic + human |
+| 14 | Test Generation | AI tests miss real bugs | Mutation testing validation |
+| 15 | CI/CD Pipeline | AI skips security tests | Mandatory gates (cannot skip) |
 
 ---
 
@@ -102,7 +110,7 @@ python run_demo.py              # If available
 
 | Requirement | Labs |
 |-------------|------|
-| Python only (no pip install) | 04, 09, 11, 12 |
+| Python only (no pip install) | 04, 09, 11, 12, 13, 14, 15 |
 | numpy, scikit-learn | 05, 06, 07, 08, 10 |
 | flask, requests | 02 |
 | OpenRouter API key | 03 |
@@ -123,3 +131,6 @@ python run_demo.py              # If available
 | Red-Teaming | Automated vulnerability probing | 09, 11 |
 | Statistical Validation | Detect poisoned training data | 10 |
 | Human-in-the-Loop | Require approval for high-risk actions | 12 |
+| Multi-Layer Review | AI + SAST + human for code review | 13 |
+| Mutation Testing | Validate AI-generated test quality | 14 |
+| Mandatory Gates | Security checks AI cannot skip | 15 |
