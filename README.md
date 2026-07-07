@@ -28,7 +28,12 @@ ai-security/
 │   ├── lab-15-ai-cicd-manipulation/          # CI/CD pipeline manipulation
 │   ├── lab-16-test-data-leakage/             # AI test data PII leakage
 │   ├── lab-17-bug-triage-manipulation/       # AI bug priority manipulation
-│   └── lab-18-test-input-injection/          # Prompt injection via test inputs
+│   ├── lab-18-test-input-injection/          # Prompt injection via test inputs
+│   ├── lab-19-ai-gateway-security/           # AI gateway policy bypass
+│   ├── lab-20-enterprise-rag-security/       # Enterprise RAG poisoning
+│   ├── lab-21-ai-soc-security/              # AI SIEM log injection
+│   ├── lab-22-agent-identity/               # Agent privilege escalation
+│   └── lab-23-ai-cost-governance/           # AI cost & governance abuse
 │
 │   └── Labs_Explained_For_Beginners.md      # Beginner-friendly lab guide
 │
@@ -68,6 +73,16 @@ ai-security/
 | Lab 16 | AI Test Data Generation | PII Leakage in Synthetic Data | AML.T0024 |
 | Lab 17 | AI Bug Triage | Manipulating Priority Classification | AML.T0051 |
 | Lab 18 | AI Test Runner | Prompt Injection via App Responses | AML.T0051 |
+
+### Section C: Enterprise Agentic AI Security (Labs 19–23)
+
+| Lab | Enterprise Scenario | Threat | MITRE ATLAS |
+|-----|-------------------|--------|-------------|
+| Lab 19 | AI Gateway | Policy bypass, unauthorized model access, token abuse | AML.T0051 |
+| Lab 20 | Enterprise RAG | Poisoned knowledge base, wrong maintenance decisions | AML.T0020 |
+| Lab 21 | AI SOC / SIEM | False alerts, prompt injection in logs | AML.T0051 |
+| Lab 22 | Agent Identity | Privilege escalation, cross-agent tool abuse | AML.T0051 |
+| Lab 23 | AI Cost & Governance | Runaway agents, token explosion, audit gaps | AML.T0029 |
 
 ---
 
