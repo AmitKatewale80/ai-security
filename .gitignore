@@ -31,9 +31,9 @@ AI_Security_Presentation.html
 test_model_security.py
 
 # QA labs (kept locally only)
-airline-labs/lab-13-ai-code-review-bypass/
-airline-labs/lab-14-ai-test-generation/
-airline-labs/lab-15-ai-cicd-manipulation/
-airline-labs/lab-16-test-data-leakage/
-airline-labs/lab-17-bug-triage-manipulation/
-airline-labs/lab-18-test-input-injection/
+airline-labs/lab-18-ai-code-review-bypass/
+airline-labs/lab-19-ai-test-generation/
+airline-labs/lab-20-ai-cicd-manipulation/
+airline-labs/lab-21-test-data-leakage/
+airline-labs/lab-22-bug-triage-manipulation/
+airline-labs/lab-23-test-input-injection/
