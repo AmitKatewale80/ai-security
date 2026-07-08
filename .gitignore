@@ -29,3 +29,11 @@ platform-security/
 examples/
 AI_Security_Presentation.html
 test_model_security.py
+
+# QA labs (kept locally only)
+airline-labs/lab-13-ai-code-review-bypass/
+airline-labs/lab-14-ai-test-generation/
+airline-labs/lab-15-ai-cicd-manipulation/
+airline-labs/lab-16-test-data-leakage/
+airline-labs/lab-17-bug-triage-manipulation/
+airline-labs/lab-18-test-input-injection/
