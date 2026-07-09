@@ -2,7 +2,7 @@
 
 ## Overview
 
-15 hands-on labs demonstrating AI/ML security threats and defenses in airline operations and DevSecOps. Each lab shows a real attack scenario and its corresponding defense mechanism.
+15 hands-on labs demonstrating AI/ML security threats and defenses in airline operations and DevSecOps. Each lab shows a real attack scenario and its corresponding defense mechanism. Aligned with **MITRE ATLAS**, **OWASP Top 10 for LLMs**, **NIST AI RMF**, and **CTEM** frameworks.
 
 ---
 
@@ -34,6 +34,31 @@
 | LLM08 | Vector & Embedding Weaknesses | 04 |
 | LLM09 | Misinformation | 11, 14 |
 | LLM10 | Unbounded Consumption | 02 |
+
+---
+
+### NIST AI RMF (Risk Management Framework)
+
+The NIST AI Risk Management Framework defines 4 functions for managing AI risk. Our labs cover all 4:
+
+| Function | What it means | Labs |
+|----------|---------------|------|
+| **GOVERN** | Policies, roles, accountability for AI risk | 12 (policy-as-code, audit), 17 (governance dashboard, budgets) |
+| **MAP** | Identify and classify AI risks | 09 (red-teaming identifies risks), 11 (compliance scanning maps violations) |
+| **MEASURE** | Quantify and track AI risks | 10 (statistical validation), 11 (compliance scoring), 17 (cost monitoring) |
+| **MANAGE** | Mitigate, monitor, respond to AI risks | All labs (every defense technique is a "manage" action) |
+
+### CTEM (Continuous Threat Exposure Management)
+
+CTEM's 5-stage cycle for ongoing security. Our labs demonstrate all 5 stages:
+
+| Stage | What it means | Labs |
+|-------|---------------|------|
+| **Scoping** | Define AI attack surface | 13 (gateway maps all models + access levels) |
+| **Discovery** | Find vulnerabilities | 09 (11 probes discover weaknesses), 11 (Garak discovers gaps) |
+| **Prioritization** | Rank by business impact | 11 (CRITICAL/HIGH/MEDIUM tiers), 09 (severity-based deploy decision) |
+| **Validation** | Prove exploitability | All attack scripts (every lab proves the exploit works) |
+| **Mobilization** | Fix and verify | All defense scripts (every lab proves the fix blocks the attack) |
 
 ---
 
