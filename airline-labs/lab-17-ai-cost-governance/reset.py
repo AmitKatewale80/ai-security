@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 23: Reset script for AI Cost & Governance lab.
+Lab 17: Reset script for AI Cost & Governance lab.
 
 Cleans up any artifacts created during the lab.
 
@@ -17,7 +17,7 @@ def reset():
     """Clean up any artifacts."""
     lab_dir = Path(__file__).parent
 
-    print("✈️  Resetting Airline Lab 23: AI Cost & Governance Abuse\n")
+    print("✈️  Resetting Airline Lab 17: AI Cost & Governance Abuse\n")
 
     # Clean up pycache
     pycache_dir = lab_dir / "__pycache__"
@@ -25,7 +25,7 @@ def reset():
         shutil.rmtree(pycache_dir)
         print("    Removed: __pycache__/")
 
-    print("\n  ✅ Lab 23 reset complete.\n")
+    print("\n  ✅ Lab 17 reset complete.\n")
 
 
 if __name__ == "__main__":

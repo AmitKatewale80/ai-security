@@ -109,3 +109,20 @@ python reset.py
 **Author:** AmitK | MIT License
 
 **Disclaimer:** For educational and demonstration purposes only.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-06-tampered-predictive-maintenance-model) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#46-model-protection) | Cryptographic model protection |
+| [🚀 Module 9: Secure SDLC](../academy/module-09-secure-sdlc.md#94-model-lifecycle-management) | Model lifecycle & signing |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 05: Code Injection](../lab-05-malicious-code-injection/) | Lab 06 of 23 | [Lab 07: PII Tokenization](../lab-07-pii-tokenization/) |

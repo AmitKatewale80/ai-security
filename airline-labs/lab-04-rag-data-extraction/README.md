@@ -120,3 +120,20 @@ python reset.py
 **Author:** AmitK | MIT License
 
 **Disclaimer:** For educational and demonstration purposes only.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-04-extracting-confidential-crew--safety-data-from-rag) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#44-secure-rag) | Secure RAG architecture |
+| [🏗️ Module 8: Architecture](../academy/module-08-enterprise-architecture.md#83-enterprise-rag-architecture) | Enterprise RAG design |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 03: Chatbot Hijacking](../lab-03-chatbot-hijacking/) | Lab 04 of 23 | [Lab 05: Code Injection](../lab-05-malicious-code-injection/) |

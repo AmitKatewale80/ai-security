@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 20: Enterprise RAG - Wrong Maintenance Decisions
+Lab 14: Enterprise RAG - Wrong Maintenance Decisions
 
 Demonstrates how the poisoned knowledge base leads the AI to make
 dangerous maintenance recommendations that could endanger aircraft safety.
@@ -111,7 +111,7 @@ def main():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 20: IMPACT - Wrong Maintenance Decisions from Poisoned RAG
+  LAB 14: IMPACT - Wrong Maintenance Decisions from Poisoned RAG
 {'='*65}
 {RESET}""")
 

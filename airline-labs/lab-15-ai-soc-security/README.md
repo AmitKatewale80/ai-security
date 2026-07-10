@@ -1,4 +1,4 @@
-# Lab 21: Agentic SIEM / AI SOC Security
+# Lab 15: Agentic SIEM / AI SOC Security
 
 ![MITRE ATLAS](https://img.shields.io/badge/MITRE_ATLAS-AML.T0048-red)
 
@@ -45,7 +45,7 @@ Without log sanitization:
 ## 📁 Lab Structure
 
 ```
-lab-21-ai-soc-security/
+lab-15-ai-soc-security/
 ├── 1_ai_siem_system.py             # AI-powered SIEM monitoring airline systems
 ├── 2_log_injection_attack.py       # Attacker injects prompt injection in logs
 ├── 3_missed_real_threats.py        # AI SIEM misses real threats
@@ -60,7 +60,7 @@ lab-21-ai-soc-security/
 ## ⚡ Quick Start
 
 ```bash
-cd airline-labs/lab-21-ai-soc-security
+cd airline-labs/lab-15-ai-soc-security
 python -m venv .venv
 
 # Windows:
@@ -134,3 +134,20 @@ This lab demonstrates AI SIEM vulnerabilities to help airline security teams und
 ---
 
 **Author:** AmitK | MIT License
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-15-agentic-siem--ai-soc-security--log-injection) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🔄 Module 7: Continuous Security](../academy/module-07-continuous-security.md#74-ai-soc-security-operations-center) | AI SOC operations |
+| [⚔️ Module 3: Offensive Security](../academy/module-03-offensive-security.md#31-prompt-injection) | Log injection as prompt injection |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 14: RAG Poisoning](../lab-14-enterprise-rag-security/) | Lab 15 of 23 | [Lab 16: Agent Identity](../lab-16-agent-identity/) |

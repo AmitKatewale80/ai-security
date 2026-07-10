@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 20: Enterprise RAG - Knowledge Base Poisoning Attack
+Lab 14: Enterprise RAG - Knowledge Base Poisoning Attack
 
 Demonstrates how an attacker injects a poisoned document into the shared
 knowledge base, changing the CFM56 inspection interval from 2500 to 5000 hours.
@@ -112,7 +112,7 @@ def simulate_attack():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 20: ATTACK - Knowledge Base Poisoning
+  LAB 14: ATTACK - Knowledge Base Poisoning
 {'='*65}
 {RESET}""")
 

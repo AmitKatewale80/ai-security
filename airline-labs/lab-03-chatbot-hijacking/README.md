@@ -137,3 +137,20 @@ Try the same prompt — the attack will be detected and halted.
 |-----------|-----|-----------|
 | LLM Prompt Injection | AML.T0051 | Indirect injection via documents |
 | LLM Meta Prompt Extraction | AML.T0043 | Extracting system prompts |
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-03-hijacking-the-customer-service-chatbot) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [⚔️ Module 3: Offensive Security](../academy/module-03-offensive-security.md#31-prompt-injection) | Prompt injection techniques |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#41-guardrails) | Input/output guardrails |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 02: Model Stealing](../lab-02-model-stealing/) | Lab 03 of 23 | [Lab 04: RAG Extraction](../lab-04-rag-data-extraction/) |

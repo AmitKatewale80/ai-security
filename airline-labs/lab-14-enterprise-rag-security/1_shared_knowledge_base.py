@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 20: Enterprise RAG - Shared Knowledge Base
+Lab 14: Enterprise RAG - Shared Knowledge Base
 
 Demonstrates a multi-department RAG system where operations, maintenance,
 and finance teams share a knowledge base for airline decision-making.
@@ -153,7 +153,7 @@ def main():
     print(f"""
 {BOLD}{CYAN}
 {'='*65}
-  LAB 20: Enterprise RAG - Shared Airline Knowledge Base
+  LAB 14: Enterprise RAG - Shared Airline Knowledge Base
 {'='*65}
 {RESET}""")
 

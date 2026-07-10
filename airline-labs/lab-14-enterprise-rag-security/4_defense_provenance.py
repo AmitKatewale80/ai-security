@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 20: Enterprise RAG - Defense: Provenance & Multi-Source Validation
+Lab 14: Enterprise RAG - Defense: Provenance & Multi-Source Validation
 
 Demonstrates defenses against knowledge base poisoning:
 1. Document provenance verification (cryptographic signing)
@@ -211,7 +211,7 @@ def main():
     print(f"""
 {BOLD}{GREEN}
 {'='*65}
-  LAB 20: DEFENSE - Provenance & Multi-Source Validation
+  LAB 14: DEFENSE - Provenance & Multi-Source Validation
 {'='*65}
 {RESET}""")
 

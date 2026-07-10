@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 21: AI SOC - AI-Powered SIEM System
+Lab 15: AI SOC - AI-Powered SIEM System
 
 Demonstrates an AI-powered Security Operations Center that monitors
 airline systems including booking, check-in, crew scheduling, and
@@ -188,7 +188,7 @@ def main():
     print(f"""
 {BOLD}{CYAN}
 {'='*65}
-  LAB 21: AI-Powered SIEM - Airline Security Operations Center
+  LAB 15: AI-Powered SIEM - Airline Security Operations Center
 {'='*65}
 {RESET}""")
 

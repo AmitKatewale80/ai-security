@@ -1,4 +1,4 @@
-# Lab 23: AI Cost & Governance Abuse
+# Lab 17: AI Cost & Governance Abuse
 
 ![MITRE ATLAS](https://img.shields.io/badge/MITRE_ATLAS-AML.T0048-red)
 
@@ -47,7 +47,7 @@ Without governance:
 ## 📁 Lab Structure
 
 ```
-lab-23-ai-cost-governance/
+lab-17-ai-cost-governance/
 ├── 1_ai_cost_monitoring.py         # Normal AI cost monitoring
 ├── 2_runaway_agent.py              # Agent stuck in infinite loop
 ├── 3_token_explosion.py            # Token/context explosion attack
@@ -62,7 +62,7 @@ lab-23-ai-cost-governance/
 ## ⚡ Quick Start
 
 ```bash
-cd airline-labs/lab-23-ai-cost-governance
+cd airline-labs/lab-17-ai-cost-governance
 python -m venv .venv
 
 # Windows:
@@ -136,3 +136,20 @@ This lab demonstrates AI cost governance failures to help airline teams implemen
 ---
 
 **Author:** AmitK | MIT License
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-17-ai-cost--governance-abuse--runaway-agents) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#45-secure-ai-agents) | Agent cost controls |
+| [🏛️ Module 6: AI Governance](../academy/module-06-ai-governance.md#63-ai-risk-management) | Cost governance policies |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 16: Agent Identity](../lab-16-agent-identity/) | Lab 17 of 23 | [Lab 18: Code Review Bypass](../lab-18-ai-code-review-bypass/) |

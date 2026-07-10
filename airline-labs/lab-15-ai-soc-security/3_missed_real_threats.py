@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 21: AI SOC - Missed Real Threats
+Lab 15: AI SOC - Missed Real Threats
 
 Demonstrates the consequences of a compromised AI SIEM: real attacks
 go undetected while the attacker exfiltrates passenger data.
@@ -51,7 +51,7 @@ def simulate_attack_timeline():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 21: IMPACT - Real Threats Missed by Compromised AI SIEM
+  LAB 15: IMPACT - Real Threats Missed by Compromised AI SIEM
 {'='*65}
 {RESET}""")
 

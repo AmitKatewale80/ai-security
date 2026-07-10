@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 21: AI SOC - Log Injection Attack
+Lab 15: AI SOC - Log Injection Attack
 
 Demonstrates how an attacker injects crafted log entries containing
 prompt injection payloads that manipulate the AI SIEM into ignoring
@@ -91,7 +91,7 @@ def main():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 21: ATTACK - Log Injection into AI SIEM
+  LAB 15: ATTACK - Log Injection into AI SIEM
 {'='*65}
 {RESET}""")
 

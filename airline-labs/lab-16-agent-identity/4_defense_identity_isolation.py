@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 22: Agent Identity - Defense: Per-Agent Identity & Tool Isolation
+Lab 16: Agent Identity - Defense: Per-Agent Identity & Tool Isolation
 
 Demonstrates defenses against cross-agent privilege escalation:
 1. Per-agent unique identity (cryptographic tokens)
@@ -180,7 +180,7 @@ def main():
     print(f"""
 {BOLD}{GREEN}
 {'='*65}
-  LAB 22: DEFENSE - Per-Agent Identity & Tool Isolation
+  LAB 16: DEFENSE - Per-Agent Identity & Tool Isolation
 {'='*65}
 {RESET}""")
 

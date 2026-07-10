@@ -56,3 +56,20 @@ python 3_defense_differential_privacy.py # Defense: add noise to prevent reconst
 > **Models memorize training data.** If your model was trained on sensitive crew info,
 > attackers can extract it through clever queries. Add differential privacy to prevent
 > reconstruction of individual records.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-08-model-inversion-attack-on-crew-scheduling) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [⚔️ Module 3: Offensive Security](../academy/module-03-offensive-security.md#33-model-theft) | Model inversion techniques |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#46-model-protection) | Differential privacy defense |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 07: PII Tokenization](../lab-07-pii-tokenization/) | Lab 08 of 23 | [Lab 09: Red-Teaming](../lab-09-chatbot-vulnerability-testing/) |

@@ -96,3 +96,20 @@ python reset.py
 **Author:** AmitK | MIT License
 
 **Disclaimer:** For educational and demonstration purposes only.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-11-garak-compliance-testing) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🏛️ Module 6: AI Governance](../academy/module-06-ai-governance.md#64-responsible-ai) | Compliance & responsible AI |
+| [🔄 Module 7: Continuous Security](../academy/module-07-continuous-security.md#72-continuous-validation) | Compliance scanning in CI/CD |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 10: Data Poisoning](../lab-10-data-poisoning/) | Lab 11 of 23 | [Lab 12: Agent Security](../lab-12-ai-agent-security/) |

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 22: Agent Identity - Multi-Agent Airline System
+Lab 16: Agent Identity - Multi-Agent Airline System
 
 Demonstrates a multi-agent system where booking, maintenance, and
 operations agents share infrastructure. Shows the VULNERABLE configuration
@@ -125,7 +125,7 @@ def main():
     print(f"""
 {BOLD}{CYAN}
 {'='*65}
-  LAB 22: Multi-Agent Airline System (Vulnerable Configuration)
+  LAB 16: Multi-Agent Airline System (Vulnerable Configuration)
 {'='*65}
 {RESET}""")
 

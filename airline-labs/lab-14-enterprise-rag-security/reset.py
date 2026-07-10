@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 20: Reset script for Enterprise RAG Security lab.
+Lab 14: Reset script for Enterprise RAG Security lab.
 
 Cleans up any artifacts created during the lab.
 
@@ -17,7 +17,7 @@ def reset():
     """Clean up any artifacts."""
     lab_dir = Path(__file__).parent
 
-    print("✈️  Resetting Airline Lab 20: Enterprise RAG / Ontology Security\n")
+    print("✈️  Resetting Airline Lab 14: Enterprise RAG / Ontology Security\n")
 
     # Clean up pycache
     pycache_dir = lab_dir / "__pycache__"
@@ -25,7 +25,7 @@ def reset():
         shutil.rmtree(pycache_dir)
         print("    Removed: __pycache__/")
 
-    print("\n  ✅ Lab 20 reset complete.\n")
+    print("\n  ✅ Lab 14 reset complete.\n")
 
 
 if __name__ == "__main__":

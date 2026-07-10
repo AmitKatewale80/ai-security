@@ -1,4 +1,4 @@
-# Lab 20: Enterprise RAG / Ontology Security
+# Lab 14: Enterprise RAG / Ontology Security
 
 ![MITRE ATLAS](https://img.shields.io/badge/MITRE_ATLAS-AML.T0051-red)
 
@@ -45,7 +45,7 @@ Without provenance checks:
 ## 📁 Lab Structure
 
 ```
-lab-20-enterprise-rag-security/
+lab-14-enterprise-rag-security/
 ├── 1_shared_knowledge_base.py      # Multi-department shared knowledge base
 ├── 2_poison_knowledge_base.py      # Attacker injects poisoned document
 ├── 3_wrong_decisions.py            # AI makes dangerous maintenance decisions
@@ -60,7 +60,7 @@ lab-20-enterprise-rag-security/
 ## ⚡ Quick Start
 
 ```bash
-cd airline-labs/lab-20-enterprise-rag-security
+cd airline-labs/lab-14-enterprise-rag-security
 python -m venv .venv
 
 # Windows:
@@ -134,3 +134,20 @@ This lab demonstrates RAG poisoning vulnerabilities to help airline security tea
 ---
 
 **Author:** AmitK | MIT License
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-14-enterprise-rag--ontology-security--poisoned-knowledge-base) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#44-secure-rag) | Secure RAG patterns |
+| [🏗️ Module 8: Architecture](../academy/module-08-enterprise-architecture.md#83-enterprise-rag-architecture) | Enterprise RAG architecture |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 13: AI Gateway](../lab-13-ai-gateway-security/) | Lab 14 of 23 | [Lab 15: AI SOC](../lab-15-ai-soc-security/) |

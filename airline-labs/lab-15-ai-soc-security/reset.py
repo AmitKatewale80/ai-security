@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 21: Reset script for AI SOC Security lab.
+Lab 15: Reset script for AI SOC Security lab.
 
 Cleans up any artifacts created during the lab.
 
@@ -17,7 +17,7 @@ def reset():
     """Clean up any artifacts."""
     lab_dir = Path(__file__).parent
 
-    print("✈️  Resetting Airline Lab 21: Agentic SIEM / AI SOC Security\n")
+    print("✈️  Resetting Airline Lab 15: Agentic SIEM / AI SOC Security\n")
 
     # Clean up pycache
     pycache_dir = lab_dir / "__pycache__"
@@ -25,7 +25,7 @@ def reset():
         shutil.rmtree(pycache_dir)
         print("    Removed: __pycache__/")
 
-    print("\n  ✅ Lab 21 reset complete.\n")
+    print("\n  ✅ Lab 15 reset complete.\n")
 
 
 if __name__ == "__main__":

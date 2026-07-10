@@ -113,3 +113,21 @@ python reset.py
 **Author:** AmitK | MIT License
 
 **Disclaimer:** For educational and demonstration purposes only.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-05-backdoored-baggage-screening-model) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [⚔️ Module 3: Offensive Security](../academy/module-03-offensive-security.md#34-data-poisoning) | Backdoor techniques |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#46-model-protection) | Model scanning defenses |
+| [🚀 Module 9: Secure SDLC](../academy/module-09-secure-sdlc.md#95-supply-chain-security) | Supply chain controls |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 04: RAG Extraction](../lab-04-rag-data-extraction/) | Lab 05 of 23 | [Lab 06: Model Signing](../lab-06-model-signing/) |

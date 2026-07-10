@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 23: AI Cost & Governance - Normal Cost Monitoring
+Lab 17: AI Cost & Governance - Normal Cost Monitoring
 
 Demonstrates normal AI agent cost patterns for an airline with
 customer service, operations, and analytics agents.
@@ -93,7 +93,7 @@ def main():
     print(f"""
 {BOLD}{CYAN}
 {'='*65}
-  LAB 23: AI Cost Monitoring - Normal Operations
+  LAB 17: AI Cost Monitoring - Normal Operations
 {'='*65}
 {RESET}""")
 

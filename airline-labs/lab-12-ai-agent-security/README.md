@@ -105,3 +105,20 @@ python reset.py
 **Author:** AmitK | MIT License
 
 **Disclaimer:** For educational and demonstration purposes only.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-12-securing-the-operations-ai-agent) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#45-secure-ai-agents) | 5 security pillars for agents |
+| [🏛️ Module 6: AI Governance](../academy/module-06-ai-governance.md#62-ai-policies) | Agent authority policies |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 11: Garak Compliance](../lab-11-garak-red-teaming/) | Lab 12 of 23 | [Lab 13: AI Gateway](../lab-13-ai-gateway-security/) |

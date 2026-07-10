@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 22: Reset script for Agent Identity lab.
+Lab 16: Reset script for Agent Identity lab.
 
 Cleans up any artifacts created during the lab.
 
@@ -17,7 +17,7 @@ def reset():
     """Clean up any artifacts."""
     lab_dir = Path(__file__).parent
 
-    print("✈️  Resetting Airline Lab 22: Agent Identity & Least Privilege\n")
+    print("✈️  Resetting Airline Lab 16: Agent Identity & Least Privilege\n")
 
     # Clean up pycache
     pycache_dir = lab_dir / "__pycache__"
@@ -25,7 +25,7 @@ def reset():
         shutil.rmtree(pycache_dir)
         print("    Removed: __pycache__/")
 
-    print("\n  ✅ Lab 22 reset complete.\n")
+    print("\n  ✅ Lab 16 reset complete.\n")
 
 
 if __name__ == "__main__":

@@ -147,3 +147,21 @@ python reset.py
 |-----------|-----|-----------|
 | Full ML Model Access | AML.T0044 | Cloning pricing decisions |
 | Exfiltration via Inference API | AML.T0024 | Stealing via fare quotes |
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-02-stealing-the-dynamic-pricing-engine) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [⚔️ Module 3: Offensive Security](../academy/module-03-offensive-security.md#33-model-theft) | Model theft techniques |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#46-model-protection) | API protection strategies |
+| [🏗️ Module 8: Architecture](../academy/module-08-enterprise-architecture.md#81-ai-gateway-architecture) | AI Gateway rate limiting |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 01: Supply Chain](../lab-01-supply-chain-attack/) | Lab 02 of 23 | [Lab 03: Chatbot Hijacking](../lab-03-chatbot-hijacking/) |

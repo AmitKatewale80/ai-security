@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 22: Agent Identity - Privilege Escalation Attack
+Lab 16: Agent Identity - Privilege Escalation Attack
 
 Demonstrates how an attacker compromises the customer-facing booking agent
 and escalates to access maintenance and operations tools.
@@ -58,7 +58,7 @@ def main():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 22: ATTACK - Privilege Escalation via Booking Agent
+  LAB 16: ATTACK - Privilege Escalation via Booking Agent
 {'='*65}
 {RESET}""")
 

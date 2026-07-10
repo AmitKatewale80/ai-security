@@ -53,3 +53,20 @@ python 4_breach_tokenized.py           # Attacker breaches → sees only useless
 
 > **Tokenize PII before it enters ANY AI pipeline.** The model works just as well
 > on tokens, but a breach yields zero useful data to the attacker.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-07-pii-tokenization-for-loyalty-fraud-detection) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#46-model-protection) | Data protection strategies |
+| [🏛️ Module 6: AI Governance](../academy/module-06-ai-governance.md#62-ai-policies) | Data handling policies |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 06: Model Signing](../lab-06-model-signing/) | Lab 07 of 23 | [Lab 08: Model Inversion](../lab-08-model-inversion/) |

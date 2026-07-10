@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 23: AI Cost & Governance - Defense: Budgets, Loop Detection, Shutdown
+Lab 17: AI Cost & Governance - Defense: Budgets, Loop Detection, Shutdown
 
 Demonstrates governance controls that prevent runaway costs:
 1. Per-agent budgets (hard limits)
@@ -156,7 +156,7 @@ def main():
     print(f"""
 {BOLD}{GREEN}
 {'='*65}
-  LAB 23: DEFENSE - AI Cost Governance & Controls
+  LAB 17: DEFENSE - AI Cost Governance & Controls
 {'='*65}
 {RESET}""")
 

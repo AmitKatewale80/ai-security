@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 22: Agent Identity - Cross-Agent Abuse Scenarios
+Lab 16: Agent Identity - Cross-Agent Abuse Scenarios
 
 Demonstrates multiple scenarios where lack of agent identity isolation
 leads to cross-domain abuse in airline operations.
@@ -108,7 +108,7 @@ def main():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 22: Cross-Agent Abuse Scenarios
+  LAB 16: Cross-Agent Abuse Scenarios
 {'='*65}
 {RESET}""")
 

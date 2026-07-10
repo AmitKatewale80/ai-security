@@ -93,7 +93,7 @@ class AIGateway:
 
 def main():
     print(f"\n{BOLD}{'='*60}{RESET}")
-    print(f"{BOLD}{CYAN}  🔒 Lab 19: Airline AI Gateway{RESET}")
+    print(f"{BOLD}{CYAN}  🔒 Lab 13: Airline AI Gateway{RESET}")
     print(f"{BOLD}{'='*60}{RESET}\n")
 
     gw = AIGateway()

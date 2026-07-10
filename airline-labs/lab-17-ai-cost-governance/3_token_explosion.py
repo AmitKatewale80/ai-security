@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 23: AI Cost & Governance - Token Explosion Attack
+Lab 17: AI Cost & Governance - Token Explosion Attack
 
 Demonstrates how an attacker intentionally injects long context into
 AI agents to multiply API costs (denial-of-wallet attack).
@@ -50,7 +50,7 @@ def main():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 23: ATTACK - Token Explosion (Denial-of-Wallet)
+  LAB 17: ATTACK - Token Explosion (Denial-of-Wallet)
 {'='*65}
 {RESET}""")
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 23: AI Cost & Governance - Runaway Agent Loop
+Lab 17: AI Cost & Governance - Runaway Agent Loop
 
 Demonstrates how a customer service agent gets stuck in a reasoning loop,
 calling itself repeatedly and generating $50K+ in API costs overnight.
@@ -69,7 +69,7 @@ def simulate_runaway_loop():
     print(f"""
 {BOLD}{RED}
 {'='*65}
-  LAB 23: ATTACK - Runaway Agent Loop ($50K Overnight)
+  LAB 17: ATTACK - Runaway Agent Loop ($50K Overnight)
 {'='*65}
 {RESET}""")
 

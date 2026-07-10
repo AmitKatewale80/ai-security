@@ -1,4 +1,4 @@
-# Lab 19: AI Gateway Security — Policy Bypass & Token Abuse
+# Lab 13: AI Gateway Security — Policy Bypass & Token Abuse
 
 [![MITRE ATLAS](https://img.shields.io/badge/ATLAS-AML.T0051-red.svg)](https://atlas.mitre.org/techniques/AML.T0051)
 
@@ -36,3 +36,20 @@ python 4_defense_gateway.py         # Defense: strict policy enforcement
 
 > **AI Gateways must enforce model-level access control, not just authentication.**
 > A valid token for one model should never grant access to another.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-13-ai-gateway-security--policy-bypass--token-abuse) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#43-ai-gateway) | AI Gateway policies |
+| [🏗️ Module 8: Architecture](../academy/module-08-enterprise-architecture.md#81-ai-gateway-architecture) | Gateway architecture design |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 12: Agent Security](../lab-12-ai-agent-security/) | Lab 13 of 23 | [Lab 14: RAG Poisoning](../lab-14-enterprise-rag-security/) |

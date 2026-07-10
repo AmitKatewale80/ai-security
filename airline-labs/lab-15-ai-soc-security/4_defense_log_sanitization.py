@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Lab 21: AI SOC - Defense: Log Sanitization & Alert Integrity
+Lab 15: AI SOC - Defense: Log Sanitization & Alert Integrity
 
 Demonstrates defenses against AI SIEM log injection:
 1. Log sanitization before AI processing
@@ -201,7 +201,7 @@ def main():
     print(f"""
 {BOLD}{GREEN}
 {'='*65}
-  LAB 21: DEFENSE - Log Sanitization & Alert Integrity
+  LAB 15: DEFENSE - Log Sanitization & Alert Integrity
 {'='*65}
 {RESET}""")
 

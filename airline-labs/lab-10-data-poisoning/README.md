@@ -56,3 +56,20 @@ python 4_detect_poisoning.py        # Defense: statistical detection
 > **Your model is only as trustworthy as your training data.**
 > Implement statistical validation on training data BEFORE retraining.
 > Detect outliers, distribution shifts, and sudden changes in data patterns.
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-10-training-data-poisoning--fuel-optimization) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [⚔️ Module 3: Offensive Security](../academy/module-03-offensive-security.md#34-data-poisoning) | Data poisoning strategies |
+| [🚀 Module 9: Secure SDLC](../academy/module-09-secure-sdlc.md#94-model-lifecycle-management) | Retrain validation gates |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 09: Red-Teaming](../lab-09-chatbot-vulnerability-testing/) | Lab 10 of 23 | [Lab 11: Garak Compliance](../lab-11-garak-red-teaming/) |

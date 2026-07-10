@@ -1,4 +1,4 @@
-# Lab 22: Agent Identity & Least Privilege
+# Lab 16: Agent Identity & Least Privilege
 
 ![MITRE ATLAS](https://img.shields.io/badge/MITRE_ATLAS-AML.T0048-red)
 
@@ -46,7 +46,7 @@ Without identity isolation:
 ## 📁 Lab Structure
 
 ```
-lab-22-agent-identity/
+lab-16-agent-identity/
 ├── 1_multi_agent_system.py          # Multi-agent airline system
 ├── 2_privilege_escalation.py        # Booking agent escalates privileges
 ├── 3_cross_agent_abuse.py           # Demonstrates cross-agent tool abuse
@@ -61,7 +61,7 @@ lab-22-agent-identity/
 ## ⚡ Quick Start
 
 ```bash
-cd airline-labs/lab-22-agent-identity
+cd airline-labs/lab-16-agent-identity
 python -m venv .venv
 
 # Windows:
@@ -135,3 +135,20 @@ This lab demonstrates agent privilege escalation to help airline security teams 
 ---
 
 **Author:** AmitK | MIT License
+
+---
+
+## 🔗 Academy Links
+
+| Resource | Description |
+|----------|-------------|
+| [📖 Beginner Explanation](../Labs_Explained_For_Beginners.md#lab-16-agent-identity--least-privilege--cross-agent-escalation) | Full beginner-friendly walkthrough |
+| [🏠 Academy Home](../academy/README.md) | 10-module training curriculum |
+| [🛡️ Module 4: Defensive Security](../academy/module-04-defensive-security.md#45-secure-ai-agents) | Agent identity isolation |
+| [🏗️ Module 8: Architecture](../academy/module-08-enterprise-architecture.md#84-identity-for-ai-systems) | AI identity architecture |
+
+---
+
+| ← Previous | [🧪 All Labs](../academy/module-05-hands-on-labs.md) | Next → |
+|:---:|:---:|:---:|
+| [Lab 15: AI SOC](../lab-15-ai-soc-security/) | Lab 16 of 23 | [Lab 17: Cost Governance](../lab-17-ai-cost-governance/) |
